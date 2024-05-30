@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pizza_title">Pizza</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div>
+        <div class="border-b  border-gray-200 fixed top-0  w-full bg-white">
+            <nav class="sm:flex justify-between  mb-4">
+                <div class="text-orange-800 ml-24 sm:ml-8">
+                    <h1 class="font-bold sm:font-semibold p-5 ">
+                        <a href="#" class="text-green-500 text-4xl sm:text-red-600 sm:text-2xl" id="home">Food House</a>
+                    </h1>
+                </div>
+                <ul class="ml-8 flex gap-8 sm:gap-14 mt-5">
+                    <li class="hover:text-fuchsia-600">
+                        <a href="#" class="ml-4">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Discounts</a>
+                    </li>
+                </ul>
+                <div class="flex justify-end mt-7 mr-10">
+                    <a href="#" class="mr-3 btn hover:bg-slate-200">Login</a>
+                    <a href="#" class="btn hover:bg-slate-200" id="register">Register</a>
+                </div>
+            </nav>
+        </div>
+        <main class="ml-24 pt-32">
+            <div>
+                <button class="btn hover:bg-slate-200 hover:text-black hover:transition-transform duration-200" id="back_btn">Back</button>
+                <header class="mb-8 text-2xl font-semibold mt-3">
+                    <h3 id="path"></h3>
+                </header>
+            </div>
+            <div class=" grid lg:grid-cols-2 gap-20"> <!--two grids for image and description-->
+                <div class="">
+                    <img src=".\img\f4.jpg" alt="f4" class="w-30">
+                </div>
+                <div>
+                    <h2 class="font-semibold text-4xl uppercase mb-6">Pizza</h3>
+                    <h3 class="font-semibold text-3xl  mb-5">Ingrediants</h3>
+                    <ul class="font-normal text-xl list-disc pl-5">
+                        <li class="mb-1">Flour</li>
+                        <li class="mb-1">Tomato</li>
+                        <li class="mb-1">Cheese</li>
+                        <li class="mb-1">Onion</li>
+                        <li>Chilli</li>
+                    </ul>
+                    <button id="ytbtn" class="btn mt-8 w-40 hover:bg-red-600 hover:text-white hover:transition-transform duration-200">Watch Now</button>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-semibold text-2xl mt-8 mb-5">Instructions</h3>
+                <div class="mb-10">
+                <p>1. Mix flour with water and make a dough</p>
+                <p>2. Add tomato, cheese, onion and chilli on top of the dough</p>
+                <p>3. Bake for 20 minutes</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="page1.js"></script>
+</body>
+</html>

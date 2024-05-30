@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply bg-yellow-200 rounded-sm overflow-hidden shadow-md transform hover:scale-105 hover:bg-yellow-300 transition-transform duration-200 cursor-pointer;
+}
+.loginbtn{
+    @apply rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-orange-500 mr-2;
+}
