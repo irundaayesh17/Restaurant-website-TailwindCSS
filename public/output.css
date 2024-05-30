@@ -860,6 +860,7 @@ video {
 
 .loginbtn {
   margin-right: 0.5rem;
+  display: none;
   cursor: pointer;
   border-radius: 9999px;
   border-width: 2px;
@@ -877,6 +878,14 @@ video {
 .loginbtn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .loginbtn {
+    display: inline-block;
+  }
 }
 
 .hover\:bg-blue-600:hover {
@@ -945,6 +954,12 @@ video {
   .sm\:text-red-600 {
     --tw-text-opacity: 1;
     color: rgb(220 38 38 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
   }
 }
 

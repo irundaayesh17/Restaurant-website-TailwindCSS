@@ -22,3 +22,14 @@ header .navbar a:hover{
     background-color:rgb(249, 115, 22);
     color: white;
 }
+
+//media query
+@media (max-width: 768px){
+    header .navbar{
+        position: absolute;
+        top:0; left: 0; right: 0;
+        background-color: white;
+        border-top: 1rem solid rgba(0,0,0,0.2);
+        padding: 1rem 0;
+    }
+}
