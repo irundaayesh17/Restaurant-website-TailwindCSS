@@ -9,8 +9,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="output.css">    
 </head>
-<body class="bg-black">
-    <header class="p-5 bg-white shadow md:flex md:items-center md:justify-between fixed w-full">
+<body class="">
+    <header class=" p-4 bg-white shadow md:flex md:items-center md:justify-between fixed w-full">
         <div class="flex justify-between items-center">
             <a href="#" class="text-2xl font-[Poppins] md:mx-0 mx-6 md:ml-10">Food House</a>
             <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
@@ -41,7 +41,36 @@
             <a href="#" class="loginbtn">Log in</a>
         </div>
     </header>
-    
+    <!-- Home -->
+    <section class="home pl-8" id="home">
+        <div class="home_slider ">
+            <div class="wrapper">
+                <div class="grid grid-cols-2 items-center flex-wrap gap-8" id="slider">
+                    <div class="content pl-14">
+                        <span class="text-2xl font-semibold text-orange-700 mb-6">Our New Dish</span>
+                        <h3 class="text-6xl font-semibold mt-2 font-mono mb-2">New Spicy Pasta</h3>
+                        <p class="text-xl text-gray-400 leading-8 mb-6">Spicy pasta is a delicious and easy recipe that you can make in less than 30 minutes. It's perfect for a quick weeknight dinner or a special occasion.</p>
+                        <a href="#" class=" rounded-md py-2 px-8 border-2 bg-slate-700 text-white">Order Now</a>
+                    </div>
+                    <div class="image size-12/12 pt-10">
+                        <img src="img/pasta.png" alt="">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 items-center flex-wrap gap-8" id="slider">
+                    <div class="content">
+                        <span class="text-2xl font-bold">Our New Noodle</span>
+                        <h3>Hot Spicy Noodle</h3>
+                        <p>Hot Spicy Noodle is a delicious and easy recipe that you can make in less than 30 minutes. It's perfect for a quick weeknight dinner or a special occasion.</p>
+                        <a href="#" class="loginbtn">Order Now</a>
+                    </div>
+                    <div class="image size-12w/12">
+                        <img src="img/noodles.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <script src="index.js"></script>
 </body>
 </html>
