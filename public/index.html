@@ -5,23 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="home_title">Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="output.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="output.css">    
 </head>
-<body>
-    <header>
-        <a href="#" class="logo">Food House</a>
+<body class="bg-black">
+    <header class="p-5 bg-white shadow md:flex md:items-center md:justify-between fixed w-full">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-2xl font-[Poppins] md:mx-0 mx-6">Food House</a>
+            <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
+        </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#order">Order</a>
+        <nav class="navbar " id="navbarr">
+            <ul class="md:flex md:items-center md:static absolute z-[-1] md:z-auto bg-white w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0">
+                <li class="mx-4 my-6 md:my-0 ">
+                <a href="#home" class="active text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                <a href="#menu" class="text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Menu</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                <a href="#about" class="text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">About</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                <a href="#contact" class="text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Contact</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                <a href="#order" class="text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Order</a>
+                </li>
+            </ul>
         </nav>
         
         <div class="buttons">
-            <i class="fas fa-bars md:hidden id="menubar"></i>
             <a href="#" class="loginbtn">Sign Up</a>
             <a href="#" class="loginbtn">Log in</a>
         </div>

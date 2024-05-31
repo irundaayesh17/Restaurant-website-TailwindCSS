@@ -1,13 +1,13 @@
-document.getElementById('pizza_card').onclick = function() {
-    window.location.href = 'page1.html';
+let navbarr = document.querySelector('ul');
+function menu(e){
+    if(e.name === 'menu'){
+        e.name = 'close';
+        //navbarr.classList.toggle('top-[10%]');
+        navbarr.classList.toggle('opacity-100');
+    }
+    else{
+        e.name = 'menu';
+        //navbarr.classList.remove('top-[10%]');
+        navbarr.classList.remove('opacity-100');
+    }
 }
-document.getElementById('register').onclick = function() {
-    window.location.href = 'register.html';
-}
-
-/*document.addEventListener('DOMContentLoaded', function() {
-    const hm_title = document.getElementById('home_title').textContent;
-    localStorage.setItem('home_title', hm_title);
-    console.log(`${hm_title}`);
-});*/
-
