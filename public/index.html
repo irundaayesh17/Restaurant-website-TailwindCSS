@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="output.css">    
 </head>
 <body class="">
-    <header class=" p-4 bg-white shadow md:flex md:items-center md:justify-between w-full fixed z-50">
+    <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-200 bg-white">
         <div class="flex justify-between items-center">
             <a href="#" class="text-2xl font-[Poppins] md:mx-0 mx-6 md:ml-10">Food House</a>
             <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
         </div>
 
         <nav class="navbar " id="navbarr">
-            <ul class="md:flex md:items-center md:static absolute z-[-1] md:z-auto bg-white w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0">
+            <ul class="md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0">
                 <li class="mx-4 my-6 md:my-0 ">
                 <a href="#home" class="active text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Home</a>
                 </li>
@@ -47,7 +47,7 @@
     </header>
     <!-- Home -->
     <section class="home pl-8" id="home">
-        <div class="swiper mySwiper home_slider md:mt-0">
+        <div class="swiper mySwiper home_slider md:mt-0 ">
             <div class="swiper-wrapper wrapper">
                 <div class="md:grid md:grid-cols-2 md:items-center md:flex-wrap md:gap-2 swiper-slide mt-24 md:mt-0" id="slider">
                     <div class="content md:pl-36">
@@ -75,8 +75,38 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-
     </section>
+    <!-- Menu -->
+    <section class=" section_containrt banner container grid gap-4 auto-rows-banner pl-3 pr-3">
+        <div class="banner_card p-2 gap-2 bg-green-200" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+            <div class="banner_card_content p-2 pl-4">
+                <h1 class="text-xl font-bold">TRY IT OUT TODAY</h1>
+                <p class="text-lg mt-4">Best Meat Burgers <br> From Wide Range</p>
+            </div>
+            <div class="banner_card_image size-12/12 mt-4 mr-3">
+                <img src="img/banner1.png" alt="">
+            </div>
+        </div>
+        <div class="banner_card p-2 gap-2 bg-red-300" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+            <div class="banner_card_content p-2 pl-4">
+                <h1 class="text-xl font-bold">BEST FRIED RICE</h1>
+                <p class="text-lg mt-4">Try New Mongolian <br> Fried Rice</p>
+            </div>
+            <div class="banner_card_image image size-12/12 mt-4 mr-3">
+                <img src="img/banner2.png" alt="">
+            </div>
+        </div>
+        <div class="banner_card p-2 gap-2 bg-yellow-100" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+            <div class="banner_card_content p-2 pl-4">
+                <h1 class="text-xl font-bold">SHAKE YOUR CHOCO SHAKE</h1>
+                <p class="text-lg mt-4 mb-2">Cravings Filled with Chocolate and Caremal</p>
+            </div>
+            <div class="banner_card_image image size-12/12 mt-6 mr-3">
+                <img src="img/banner3.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!--menu end-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>

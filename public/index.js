@@ -29,3 +29,8 @@ var swiper = new Swiper(".mySwiper", {
     },
     loop: true,
   });
+
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.classList.toggle('bg-orange-500', window.scrollY > 50);
+});

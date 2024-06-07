@@ -389,6 +389,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fr: 'minmax(0, 1fr)',
+      banner: '200px',
     },
     gridColumn: {
       auto: 'auto',
@@ -1059,6 +1060,7 @@ module.exports = {
       40: '40',
       50: '50',
     },
+    
   },
   plugins: [],
 };
