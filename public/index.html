@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="output.css">    
 </head>
 <body class="">
-    <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-200 bg-white">
+    <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-100">
         <div class="flex justify-between items-center">
             <a href="#" class="text-2xl font-[Poppins] md:mx-0 mx-6 md:ml-10">Food House</a>
             <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
@@ -77,36 +77,88 @@
         </div>
     </section>
     <!-- Menu -->
-    <section class=" section_containrt banner container grid gap-4 auto-rows-banner pl-3 pr-3">
-        <div class="banner_card p-2 gap-2 bg-green-200" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-            <div class="banner_card_content p-2 pl-4">
-                <h1 class="text-xl font-bold">TRY IT OUT TODAY</h1>
-                <p class="text-lg mt-4">Best Meat Burgers <br> From Wide Range</p>
+    <section class="menu" id="menu">
+        <section class=" section_container banner container md:mx-auto grid gap-4 auto-rows-banner pl-3 pr-3 md:flex mb-16">
+            <div class="banner_card p-2 gap-2 bg-green-200 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+                <div class="banner_card_content p-2 pl-4">
+                    <h1 class="text-xl font-bold">TRY IT OUT TODAY</h1>
+                    <p class="text-lg mt-4">Best Meat Burgers <br> From Wide Range</p>
+                </div>
+                <div class="banner_card_image size-12/12 mt-4 mr-3">
+                    <img src="img/banner1.png" alt="">
+                </div>
             </div>
-            <div class="banner_card_image size-12/12 mt-4 mr-3">
-                <img src="img/banner1.png" alt="">
+            <div class="banner_card p-2 gap-2 bg-red-300 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+                <div class="banner_card_content p-2 pl-4">
+                    <h1 class="text-xl font-bold">BEST FRIED RICE</h1>
+                    <p class="text-lg mt-4">Try New Mongolian <br> Fried Rice</p>
+                </div>
+                <div class="banner_card_image image size-12/12 mt-4 mr-3">
+                    <img src="img/banner2.png" alt="">
+                </div>
             </div>
-        </div>
-        <div class="banner_card p-2 gap-2 bg-red-300" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-            <div class="banner_card_content p-2 pl-4">
-                <h1 class="text-xl font-bold">BEST FRIED RICE</h1>
-                <p class="text-lg mt-4">Try New Mongolian <br> Fried Rice</p>
+            <div class="banner_card p-2 gap-2 bg-yellow-100 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
+                <div class="banner_card_content p-2 pl-4">
+                    <h1 class="text-xl font-bold">SHAKE YOUR CHOCO SHAKE</h1>
+                    <p class="text-lg mt-4 mb-2">Cravings Filled with Chocolate and Caremal</p>
+                </div>
+                <div class="banner_card_image image size-12/12 mt-6 mr-3">
+                    <img src="img/banner3.png" alt="">
+                </div>
             </div>
-            <div class="banner_card_image image size-12/12 mt-4 mr-3">
-                <img src="img/banner2.png" alt="">
-            </div>
-        </div>
-        <div class="banner_card p-2 gap-2 bg-yellow-100" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-            <div class="banner_card_content p-2 pl-4">
-                <h1 class="text-xl font-bold">SHAKE YOUR CHOCO SHAKE</h1>
-                <p class="text-lg mt-4 mb-2">Cravings Filled with Chocolate and Caremal</p>
-            </div>
-            <div class="banner_card_image image size-12/12 mt-6 mr-3">
-                <img src="img/banner3.png" alt="">
-            </div>
-        </div>
+        </section>
     </section>
     <!--menu end-->
+    <!-- menulist -->
+    <section class="menu_container">
+        <h3 class=" max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white";">Always Tasty</h3>
+        <h2 class="text-6xl font-medium font-custom text-center text-red-950 leading-tight" style="text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;">CHOOSE & ENJOY</h2>
+        <p class="  text-center px-6 mt-5 text-lg font-medium md:px-32">
+            At Food House, we don’t just serve food; we orchestrate a symphony of flavors that dance on your taste buds. 
+            Our cozy bistro is where passion meets palate, where every dish tells a story—a story of love, tradition, and culinary artistry.
+        </p>
+        <div class="menu_list grid gap-y-8 gap-x-4 md:grid md:grid-cols-3 md:px-12">
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+                <div class="menu_img max-w-64 m-auto hover:drop-shadow-lg mb-6 mt-5 md:max-w-72">
+                    <img src="img/m4.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
+                </div>
+                <div class="menu_content">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Zinger Burger</h3>
+                    <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Zinger Burger is more than just a fast food item; it is a culinary icon that has captured the hearts of burger enthusiasts worldwide.</p>
+                </div>
+                <div class="order_now flex items-center justify-center">
+                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                </div>
+            </div>
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+                <div class="menu_img max-w-80 m-auto hover:drop-shadow-lg mb-6 mt-5">
+                    <img src="img/m2.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
+                </div>
+                <div class="menu_content">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Double Chiken Burger</h3>
+                    <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Indulge in Perfection: Sink your teeth into our Double Chicken Burger, where crispy meets succulent.</p>
+                </div>
+                <div class="order_now flex items-center justify-center">
+                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                </div>
+            </div>
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+                <div class="menu_img max-w-72 m-auto hover:drop-shadow-lg mb-6 mt-5">
+                    <img src="img/m5.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
+                </div>
+                <div class="menu_content">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Sizzling Beef Burger</h3>
+                    <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Get ready for a flavor explosion! Our Sizzling Maverick Burger is not your ordinary beef patty—it’s a symphony of bold tastes and juicy perfection.</p>
+                </div>
+                <div class="order_now flex items-center justify-center">
+                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- menulist end -->
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
