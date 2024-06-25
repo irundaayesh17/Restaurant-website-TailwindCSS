@@ -21,7 +21,7 @@
         </div>
 
         <nav class="navbar " id="navbarr">
-            <ul class="md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0">
+            <ul class="md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent">
                 <li class="mx-4 my-6 md:my-0 ">
                 <a href="#home" class="active text-base hover:bg-orange-500 px-4 py-2 rounded-lg hover:text-white">Home</a>
                 </li>
@@ -110,8 +110,8 @@
     </section>
     <!--menu end-->
     <!-- menulist -->
-    <section class="menu_container">
-        <h3 class=" max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white";">Always Tasty</h3>
+    <section class="menu_container" id="menu">
+        <h3 class=" max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white">Always Tasty</h3>
         <h2 class="text-6xl font-medium font-custom text-center text-red-950 leading-tight" style="text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;">CHOOSE & ENJOY</h2>
         <p class="  text-center px-6 mt-5 text-lg font-medium md:px-32">
             At Food House, we don’t just serve food; we orchestrate a symphony of flavors that dance on your taste buds. 
@@ -155,10 +155,55 @@
                 </div>
             </div>
         </div>
-
+        <div>
+            <a href="#" class="max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg hover:bg-red-700 transition-all duration-200 text-white flex items-center justify-center md:mt-12">View More</a>
+        </div>
     </section>
     <!-- menulist end -->
-    
+    <!-- footer -->
+    <footer class="footer px-4 bg-orange-500 mt-16 ">
+        <div class="footer-top relative pb-12 pt-20 bg-no-repeat bg-contain bg-bottom">
+            <div class="container grid gap-7">
+                <div class="footer-brand">
+                    <a href="#" class="text-2xl font-[Poppins] text-white font-semibold">Food House</a>
+                    <p class="text-white mt-4 font-semibold">Food House is a cozy bistro that serves delicious and healthy food. Our menu is inspired by the culinary traditions of the Mediterranean and the Middle East.</p>
+                    <ul class="social-icons flex mt-6 gap-5 text-3xl">
+                        <li><a href="#"><i class="fab fa-facebook-f hover:text-white duration-200"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter  hover:text-white duration-200"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram  hover:text-white duration-200"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in  hover:text-white duration-200"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <ul class="font-medium text-white">
+                        <li><a href="#" class="relative max-w-max font-custom2 font-semibold text-2xl mb-7">Contact Info</a></li>
+                        <li class="mt-4 font-medium"><a href="#">+94 (71) 557-4562</a></li>
+                        <li><a href="#">ayeshirunda1234@gmail.com</a></li>
+                        <li><a href="#">11 Galle Road, Kaluthara</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links text-white">
+                    <ul class="font-medium">
+                        <li><a href="#">Opening Hours</a></li>
+                        <li><a href="#">Monday-Friday: 09:00-21:00</a></li>
+                        <li><a href="#">Saturday-Sunday: 15:00-00:00</a></li>
+                    </ul>
+                </div>
+                <div class="footer-form shadow-xl p-7">
+                    <p class="text-white text-2xl font-semibold font-custom2 mb-6">Subscribe to our newsletter</p>
+                    <div class="input-wrapper grid gap-2">
+                        <input type="text" class="fname w-full border border-gray-300 py-2 rounded-sm pl-4" placeholder="First Name">
+                        <input type="text" class="lname w-full border border-gray-300 py-2 rounded-sm pl-4" placeholder="Last Name">
+                        <input type="text" class="email w-full border border-gray-300 py-2 rounded-sm pl-4" placeholder="Email">
+                        <input type="text" class="description w-full border border-gray-300 py-2 rounded-sm pl-4" placeholder="Description">
+                        <button class="subscribe max-w-fit mb-4 mt-2 py-2 px-10 font-semibold text-lg font-custom2 bg-white rounded-lg text-black">Subscribe</button>
+                    </div>
+                </div>
+                <p class="text-white mt-4 text-center">© 2024 Food House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
