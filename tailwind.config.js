@@ -324,6 +324,7 @@ module.exports = {
       ],
       custom: ['Alfa Slab One', 'serif'],
       custom2: ['Roboto Condensed', 'sans-serif'],
+      custom3: ['Poppins', 'sans-serif', 'ital'],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
