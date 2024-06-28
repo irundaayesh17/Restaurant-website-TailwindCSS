@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -18,8 +18,8 @@
             <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
         </div>
 
-        <nav class="navbar" id="navbarr">
-            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent transition-opacity duration-300">
+        <nav class="navbar " id="navbarr">
+            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent">
                 <li class="mx-4 my-6 md:my-0 ">
                 <a href="#home" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Home</a>
                 </li>
@@ -44,14 +44,14 @@
         </div>
     </header>
     <!-- header end -->
-    <main class="pt-32 z-50">
-        <div class="md:grid lg:grid-cols-2 md:gap-10 ">
+    <main class="pt-32">
+        <div class="grid lg:grid-cols-2 gap-10 ">
             <div class="md:ml-32">
-                <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain hidden md:block">
+                <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain">
             </div>
-            <div class="flex items-center md:mt-10 md:ml-16 md:mb-10 mt-[-16px]">
-                <div class="bg-white md:bg-slate-100 p-8 md:rounded-lg md:shadow-lg md:max-w-md md:w-full" id="registerform">
-                        <h2 class="font-semibold text-xl font-custom3 text-center md:text-left mb-4 md:mb-0">Register</h2>
+            <div class="flex items-center mt-10 ml-16 mb-10">
+                <div class="bg-slate-100 p-8 rounded-lg shadow-lg max-w-md w-full" id="registerform">
+                        <h2 class="font-semibold text-xl">Register</h2>
                         <input type="text" id="fname" class="w-full border border-gray-300 p-2 mt-3" placeholder="First Name">
                         <span id="fnameerror" class="text-red-600 text-sm"></span>
                         <input type="text" id="lname" class="w-full border border-gray-300 p-2 mt-3" placeholder="Last Name">
@@ -113,6 +113,6 @@
     </footer>
 
     <!-- footer end -->
-    <script src="register.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

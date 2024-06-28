@@ -2,17 +2,24 @@ let navbarr = document.querySelector('ul');
 function menu(e){
     if(e.name === 'menu'){
         e.name = 'close';
-        //navbarr.classList.toggle('top-[10%]');
         navbarr.classList.toggle('opacity-100');
+        navbarr.style.zIndex = '1000';
+        navbarr.style.pointerEvents = 'all'; // Enable pointer events when navbar is visible
     }
     else{
         e.name = 'menu';
-        //navbarr.classList.remove('top-[10%]');
         navbarr.classList.remove('opacity-100');
+        navbarr.style.zIndex = '-1';
+        navbarr.style.pointerEvents = 'none'; // Disable pointer events when navbar is invisible
     }
 }
 
+
 window.addEventListener('scroll', function() {
     var header = document.querySelector('header');
-    header.classList.toggle('bg-orange-500', window.scrollY > 50);
+    if (window.scrollY > 50) {
+        header.style.backgroundImage = "url('https://i.ibb.co/VWsBT2J/headerbg.png')";
+    } else {
+        header.style.backgroundImage = "";
+    }
 });
