@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoicon.png" type="image/x-icon">
     <title id="home_title">Home</title>
     <link
     rel="stylesheet"
@@ -25,26 +26,26 @@
         <nav class="navbar " id="navbarr">
             <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent">
                 <li class="mx-4 my-6 md:my-0 ">
-                <a href="#home" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Home</a>
+                <a href="#home" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="home">Home</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#menu" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Menu</a>
+                <a href="#menu" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="menu">Menu</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#about" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">About</a>
+                <a href="#about" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="about">About</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#contact" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Contact</a>
+                <a href="#contact" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="contact">Contact</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#order" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Order</a>
+                <a href="#order" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="order">Order</a>
                 </li>
             </ul>
         </nav>
         
         <div class="buttons">
-            <a href="#" class="loginbtn">Sign Up</a>
-            <a href="#" class="loginbtn">Log in</a>
+            <a href="#" class="loginbtn" id="register">Sign Up</a>
+            <a href="#" class="loginbtn" id="login">Log in</a>
         </div>
     </header>
     <!-- Home -->
@@ -56,7 +57,7 @@
                         <span class="text-2xl font-semibold text-orange-700 mb-6">Our New Dish</span>
                         <h3 class="text-6xl font-semibold mt-2 mb-2 font-custom3">New Spicy Pasta</h3>
                         <p class="text-xl text-gray-400 leading-8 mb-6">Spicy pasta is a delicious and easy recipe that you can make in less than 30 minutes. It's perfect for a quick weeknight dinner or a special occasion.</p>
-                        <a href="#" class=" rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
+                        <a href="#" class="ordernow-cards rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
                     </div>
                     <div class="image size-12/12 md:pt-10 mt-0 md:mt-0 -ml-6 md:ml-0">
                         <img src="img/pasta.png" alt="">
@@ -67,7 +68,7 @@
                         <span class="text-2xl font-semibold text-orange-700 mb-6">Our New Noodle</span>
                         <h3 class="text-6xl font-semibold mt-2 mb-2 font-custom3">Hot Spicy Noodle</h3>
                         <p class="text-xl text-gray-400 leading-8 mb-6">Hot Spicy Noodle is a delicious and easy recipe that you can make in less than 30 minutes. It's perfect for a quick weeknight dinner or a special occasion.</p>
-                        <a href="#" class="rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
+                        <a href="#" class="ordernow-cards rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
                     </div>
                     <div class="image size-12/12 mt-0 md:mt-0 -ml-6 md:ml-0">
                         <img src="img/noodles.png" alt="">
@@ -79,10 +80,10 @@
         </div>
     </section>
     <!-- Menu -->
-    <section class="menu md:mt-5 lg:mt-0" id="menu">
+    <section class="menu md:mt-5 lg:mt-0" id="menucards">
         <section class=" section_container banner container md:mx-auto sm:mx-auto grid gap-4 auto-rows-banner pl-3 pr-3 md:flex mb-16 ">
-            <div class="banner_card p-2 gap-2 bg-green-200 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-                <div class="banner_card_content p-2 pl-4">
+            <div class="banner-card p-2 gap-2 bg-green-200 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card1">
+                <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">TRY IT OUT TODAY</h1>
                     <p class="text-lg mt-4">Best Meat Burgers <br> From Wide Range</p>
                 </div>
@@ -90,8 +91,8 @@
                     <img src="img/banner1.png" alt="" class="sm:size-11/12 md:size-auto sm:pb-4 md:pb-0 object-cover sm:object-contain">
                 </div>
             </div>
-            <div class="banner_card p-2 gap-2 bg-red-300 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-                <div class="banner_card_content p-2 pl-4">
+            <div class="banner-card p-2 gap-2 bg-red-300 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card2">
+                <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">BEST FRIED RICE</h1>
                     <p class="text-lg mt-4">Try New Mongolian <br> Fried Rice</p>
                 </div>
@@ -99,8 +100,8 @@
                     <img src="img/banner2.png" alt="" class="sm:size-11/12 md:size-auto sm:pb-4 md:pb-0 object-cover sm:object-contain">
                 </div>
             </div>
-            <div class="banner_card p-2 gap-2 bg-yellow-100 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;">
-                <div class="banner_card_content p-2 pl-4">
+            <div class="banner-card p-2 gap-2 bg-yellow-100 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card3">
+                <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">SHAKE YOUR CHOCO SHAKE</h1>
                     <p class="text-lg mt-4 mb-2">Cravings Filled with Chocolate and Caremal</p>
                 </div>
@@ -112,9 +113,11 @@
     </section>
     <!--menu end-->
     <!-- menulist -->
-    <section class="menu_container" id="menu">
+    <section class="menu_container" id="menulist">
         <h3 class=" max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white">Always Tasty</h3>
-        <h2 class="text-6xl font-medium font-custom text-center text-red-950 leading-tight" style="text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;">CHOOSE & ENJOY</h2>
+        <div class="h-auto md:h-20 items-center justify-center">
+        <h2 class="text-6xl font-medium font-custom text-center text-red-950 leading-tight auto-type1" style="text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;" id="auto-type"></h2>
+        </div>
         <p class="  text-center px-6 mt-5 text-lg font-medium md:px-32">
             At Food House, we don’t just serve food; we orchestrate a symphony of flavors that dance on your taste buds. 
             Our cozy bistro is where passion meets palate, where every dish tells a story—a story of love, tradition, and culinary artistry.
@@ -129,7 +132,7 @@
                     <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Zinger Burger is more than just a fast food item; it is a culinary icon that has captured the hearts of burger enthusiasts worldwide.</p>
                 </div>
                 <div class="order_now flex items-center justify-center">
-                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                    <a href="#" class="ordernow rounded-md py-2 px-8 bg-red-700 text-white">Order Now</a>
                 </div>
             </div>
             <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
@@ -141,7 +144,7 @@
                     <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Indulge in Perfection: Sink your teeth into our Double Chicken Burger, where crispy meets succulent.</p>
                 </div>
                 <div class="order_now flex items-center justify-center">
-                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                    <a href="#" class="ordernow rounded-md py-2 px-8 bg-red-700 text-white">Order Now</a>
                 </div>
             </div>
             <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
@@ -153,7 +156,7 @@
                     <p class="text-gray-400 font-medium mb-6 leading-7 text-center">Get ready for a flavor explosion! Our Sizzling Maverick Burger is not your ordinary beef patty—it’s a symphony of bold tastes and juicy perfection.</p>
                 </div>
                 <div class="order_now flex items-center justify-center">
-                    <a href="#" class="rounded-md py-2 px-8 bg-red-700 text-white ">Order Now</a>
+                    <a href="#" class="ordernow rounded-md py-2 px-8 bg-red-700 text-white">Order Now</a>
                 </div>
             </div>
         </div>
@@ -167,9 +170,11 @@
                 <img src="img\viewmore.png" alt="" class="size-max px-8 md:mx-auto" style="filter: drop-shadow(0px 0px 30px rgba(136, 136, 135, 0.4))">
             </div>
             <div>
-                <h1 class="lg:pt-20 mt-8 lg:mt-5 px-5 md:px-0 text-center lg:text-left font-custom3 font-bold text-3xl md:text-4xl text-red-950">We Serve Healthy & Tasty Foods</h1>
+                <div class="h-auto items-center justify-center">
+                    <h1 class="auto-type2 lg:pt-20 mt-8 lg:mt-5 px-5 md:px-0 text-center lg:text-left font-custom3 font-bold text-3xl md:text-4xl text-red-950" id="auto-type1"></h1>
+                </div>
                 <p class="text-gray-400 font-medium mb-6 leading-7 text-center lg:text-left lg:pr-16 px-8 lg:px-0 mt-3 lg:mt-5">Welcome to FoodHouse, where culinary excellence meets a warm and inviting atmosphere. Our diverse menu features a delightful fusion of classic and contemporary dishes, each crafted with the freshest ingredients and utmost care. Whether you're in the mood for a hearty meal or a light snack, our offerings cater to every palate and preference. Join us for an unforgettable dining experience that will leave you craving for more.</p>
-                <a href="#" class="max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2  rounded-lg hover:bg-red-700 transition-all duration-200 text-gray-800 flex items-center justify-center lg:justify-start lg:ml-0 lg:mt-8" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');">View More</a>
+                <a href="#" class="max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2  rounded-lg hover:bg-red-700 transition-all duration-200 text-gray-800 flex items-center justify-center lg:justify-start lg:ml-0 lg:mt-8" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');" id="viewmore">View More</a>
             </div>
         </div>
     </section>
@@ -218,6 +223,7 @@
     </footer>
 
     <!-- footer end -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>

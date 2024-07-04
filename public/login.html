@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoicon.png" type="image/x-icon">
     <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -18,53 +19,46 @@
             <ion-icon name="menu" class="text-3xl md:hidden" onclick="menu(this)"></ion-icon>
         </div>
 
-        <nav class="navbar " id="navbarr">
-            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent">
+        <nav class="navbar" id="navbarr">
+            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent transition-opacity duration-300">
                 <li class="mx-4 my-6 md:my-0 ">
-                <a href="#home" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Home</a>
+                <a href="#home" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="home">Home</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#menu" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Menu</a>
+                <a href="#menu" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="menu">Menu</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#about" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">About</a>
+                <a href="#about" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="about">About</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#contact" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Contact</a>
+                <a href="#contact" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="contact">Contact</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                <a href="#order" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white">Order</a>
+                <a href="#order" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="order">Order</a>
                 </li>
             </ul>
         </nav>
         
         <div class="buttons">
-            <a href="#" class="loginbtn">Sign Up</a>
-            <a href="#" class="loginbtn">Log in</a>
+            <a href="#" class="loginbtn" id="register">Sign Up</a>
+            <a href="#" class="loginbtn" id="login">Log in</a>
         </div>
     </header>
     <!-- header end -->
-    <main class="pt-32">
-        <div class="grid lg:grid-cols-2 gap-10 ">
+    <main class="pt-32 z-50">
+        <div class="md:grid xl:grid-cols-2 xl:gap-10 ">
             <div class="md:ml-32">
-                <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain">
+                <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain hidden xl:block">
             </div>
-            <div class="flex items-center mt-10 ml-16 mb-10">
-                <div class="bg-slate-100 p-8 rounded-lg shadow-lg max-w-md w-full" id="registerform">
-                        <h2 class="font-semibold text-xl">Register</h2>
-                        <input type="text" id="fname" class="w-full border border-gray-300 p-2 mt-3" placeholder="First Name">
-                        <span id="fnameerror" class="text-red-600 text-sm"></span>
-                        <input type="text" id="lname" class="w-full border border-gray-300 p-2 mt-3" placeholder="Last Name">
-                        <span id="lnameerror" class="text-red-600 text-sm"></span>
-                        <input type="email" id="email" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
-                        <span id="emailerror" class="text-red-600 text-sm"></span>
-                        <input type="password" id="password" class="w-full border border-gray-300 p-2 mt-3" placeholder="Password">
-                        <span id="passerror" class="text-red-600 text-sm"></span>
-                        <input type="password" id="cpassword" class="w-full border border-gray-300 p-2 mt-3" placeholder="Confirm Password">
-                        <span id="cpasserror" class="text-red-600 text-sm"></span><br>
-                        <input type="checkbox" id="showpass" class="mt-3"> Show Password
-                        <button onclick="generatepass()" class="w-full bg-green-500 hover:bg-green-600 hover:transition-transform duration-200 text-white p-2 mt-4 rounded-3xl">Generate Password</button>
-                        <button onclick="register()" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Register</button>
+            <div class="flex items-center md:mt-10 xl:ml-6 md:mb-10 mt-[-16px] md:mx-auto md:px-24 xl:px-0 xl:pr-8">
+                <div class="bg-white md:bg-slate-100 p-8  md:rounded-lg md:shadow-lg md:max-w-md " id="registerform">
+                    <h2 class="font-semibold text-xl">Sign in</h2>
+                    <input type="email" id="email" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
+                    <span id="emailerror" class="text-red-600 text-sm"></span>
+                    <input type="password" id="password" class="w-full border border-gray-300 p-2 mt-3" placeholder="Password">
+                    <span id="passerror" class="text-red-600 text-sm"></span><br>
+                    <input type="checkbox" id="showpass" class="mt-3"> Show Password
+                    <button onclick="login()" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Log in</button>
                 </div>
             </div>
         </div>
