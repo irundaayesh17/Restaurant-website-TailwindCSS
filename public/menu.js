@@ -46,11 +46,5 @@ document.getElementById('order').addEventListener('click', function() {
     window.location.href = 'order.html';
   });
 
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const currentPath = window.location.pathname;
-    // Check if the current URL is the root or explicitly index.html, and not already /home
-    if(currentPath === "/menu.html") {
-      // Use the History API to change the URL
-      window.history.replaceState(null, null, "/menu");
-    }
-  });
+  var url= "http://gitsmo.com/menu"; 
+  window.location = url; 
