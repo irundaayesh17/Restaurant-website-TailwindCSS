@@ -29,26 +29,29 @@ window.addEventListener('scroll', function() {
 document.getElementById('menu').addEventListener('click', function() {
     window.location.href = 'menu.html';
   });
-  document.getElementById('about').addEventListener('click', function() {
+document.getElementById('about').addEventListener('click', function() {
     window.location.href = 'about.html';
   });
-  document.getElementById('register').addEventListener('click', function() {
+document.getElementById('register').addEventListener('click', function() {
     window.location.href = 'register.html';
   });
-  document.getElementById('login').addEventListener('click', function() {
+document.getElementById('login').addEventListener('click', function() {
     window.location.href = 'login.html';
   });
-  document.getElementById('home').addEventListener('click', function() {
+document.getElementById('home').addEventListener('click', function() {
     window.location.href = 'index.html';
   });
-  document.getElementById('contact').addEventListener('click', function() {
+document.getElementById('contact').addEventListener('click', function() {
     window.location.href = 'contact.html';
   });
-  document.getElementById('order').addEventListener('click', function() {
+document.getElementById('order').addEventListener('click', function() {
     window.location.href = 'order.html';
   });
 
   //Registration form
+
+  
+  
 
 const showpass = document.getElementById('showpass');
 
@@ -176,22 +179,10 @@ function passwordvalidation() {
     passworderror.innerHTML = '';  // Clear error message if valid
     cpassworderror.innerHTML = '';  // Clear error message if valid
     return true;
-  }
+}
 
-  function register(){
-    if (!fnamevalidation()) {
-        return;  // Prevent form submission if first name is invalid
-    }
-    if (!emailvalidation()) {
-        return;  // Prevent form submission if email is invalid
-    }
-    if (!lnamevalidation()) {
-        return;  // Prevent form submission if first name is invalid
-    }
-    if (!passwordvalidation()) {
-        return;  // Prevent form submission if password is invalid
-    }
-    alert('Registration Successful');
-}     
+
+
+
 
 //USER REGISTRATION
