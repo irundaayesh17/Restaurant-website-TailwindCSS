@@ -135,8 +135,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Use the History API to change the URL
     window.history.replaceState(null, null, "/home");
   }
-  if(currentPath === "/menu.html") {
-    // Use the History API to change the URL
-    window.history.replaceState(null, null, "/menu");
-  }
 });
