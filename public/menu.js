@@ -45,6 +45,3 @@ document.getElementById('contact').addEventListener('click', function() {
 document.getElementById('order').addEventListener('click', function() {
     window.location.href = 'order.html';
   });
-
-  var url= "http://gitsmo.com/menu"; 
-  window.location = url; 
