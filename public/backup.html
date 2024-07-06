@@ -40,7 +40,7 @@
         <p class="text-white mt-4 text-center md:text-center">© 2024 Food House. All rights reserved.</p>
     </div>
 </footer>
-                    <div>
+
                         <h2 class="font-semibold text-xl">Sign in</h2>
                         <input type="email" id="email" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
                         <span id="emailerror" class="text-red-600 text-sm"></span>
@@ -48,23 +48,3 @@
                         <span id="passerror" class="text-red-600 text-sm"></span>
                         <input type="checkbox" id="showpass" class="mt-3"> Show Password
                         <button onclick="register()" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Log in</button>
-
-                    </div>
-
-                    function register(){
-                        if (!fnamevalidation()) {
-                            return;  // Prevent form submission if first name is invalid
-                        }
-                        if (!emailvalidation()) {
-                            return;  // Prevent form submission if email is invalid
-                        }
-                        if (!lnamevalidation()) {
-                            return;  // Prevent form submission if first name is invalid
-                        }
-                        if (!passwordvalidation()) {
-                            return;  // Prevent form submission if password is invalid
-                        }
-                        alert('Registration Successful');
-                    }     
-
-                
