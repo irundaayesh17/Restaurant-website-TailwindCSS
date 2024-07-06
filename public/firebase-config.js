@@ -24,6 +24,33 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebas
     const db = getDatabase();
     const analytics = getAnalytics(app);
 
+    // Get the input fields
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
+    const cpassword = document.getElementById('cpassword').value;
+
+document.getElementById('registerbtn').addEventListener('click', register);
+
+function register(e) {
+  e.preventDefault();  // Prevent default form submission
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  // Replace these placeholders with your actual Firebase authentication code
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      console.log(userCredential);
+      alert('User Registered Successfully');
+      // ... your additional logic after successful registration
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      alert(errorMessage);
+      // ... your error handling logic
+    });
+}
+
 
 
 

@@ -1,14 +1,15 @@
 let navbarr = document.querySelector('ul');
-
+document.getElementById('mobmenu').addEventListener('click', menu);
 function menu(e){
-    if(e.name === 'menu'){
-        e.name = 'close';
+    let icon = e.target; // Correctly access the clicked icon
+    if(icon.name === 'menu'){
+        icon.name = 'close';
         navbarr.classList.toggle('opacity-100');
         navbarr.style.zIndex = '1000';
         navbarr.style.pointerEvents = 'all'; // Enable pointer events when navbar is visible
     }
     else{
-        e.name = 'menu';
+        icon.name = 'menu';
         navbarr.classList.remove('opacity-100');
         navbarr.style.zIndex = '-1';
         navbarr.style.pointerEvents = 'none'; // Disable pointer events when navbar is invisible
@@ -50,11 +51,8 @@ document.getElementById('order').addEventListener('click', function() {
 
   //Registration form
 
-  
-  
-
 const showpass = document.getElementById('showpass');
-
+document.getElementById('generatepassw').addEventListener('click', generatepass);
 function generatepass(){
     const length = 15;
     const isinclude_uppercase = true;
@@ -101,11 +99,6 @@ function showpassword(){
 }
 showpass.addEventListener('click', showpassword);
 //variable
-const fname = document.getElementById('fname');  
-const email = document.getElementById('email'); 
-const lname = document.getElementById('lname');
-const password = document.getElementById('password');
-const cpassword = document.getElementById('cpassword');
 
 // Add event listeners to the input elements
 fname.addEventListener('input', fnamevalidation);
@@ -116,6 +109,7 @@ cpassword.addEventListener('input', passwordvalidation);
 
 
 function fnamevalidation() {
+  const fname = document.getElementById('fname');  
   const fnameerror = document.getElementById('fnameerror');
 
  
@@ -130,6 +124,7 @@ function fnamevalidation() {
 }
 
 function lnamevalidation() {
+    const lname = document.getElementById('lname');
     const lnameerror = document.getElementById('lnameerror');
   
    
@@ -144,6 +139,7 @@ function lnamevalidation() {
 }
 
 function emailvalidation() {
+  const email = document.getElementById('email'); 
   const emailerror = document.getElementById('emailerror');
 
   // Improved email validation using a regular expression
@@ -158,6 +154,8 @@ function emailvalidation() {
 }
 
 function passwordvalidation() {
+    const password = document.getElementById('password');
+    const cpassword = document.getElementById('cpassword');
     const passworderror = document.getElementById('passerror');
     const cpassworderror = document.getElementById('cpasserror');
   
@@ -181,8 +179,80 @@ function passwordvalidation() {
     return true;
 }
 
+//USER REGISTRATION - FIREBASE CONFIGURATION
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAMgAuX01CPvNgYgoC3WU7l1fafc9qKiN8",
+    authDomain: "restaurant-web-app-74ce3.firebaseapp.com",
+    projectId: "restaurant-web-app-74ce3",
+    storageBucket: "restaurant-web-app-74ce3.appspot.com",
+    messagingSenderId: "681930832106",
+    appId: "1:681930832106:web:a831f8c25f0bcd97f97f93",
+    measurementId: "G-1BNF7TDRG3"
+  };
 
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase();
+    const analytics = getAnalytics(app);
 
+    const regicon = document.getElementById('registericn');
+    const loginicon = document.getElementById('loginicn');
 
-//USER REGISTRATION
+    onAuthStateChanged(auth, (user) => {
+      console.log(user);
+  });
+
+//register function
+    document.getElementById('registerbtn').addEventListener('click', register);
+
+    function register(e) {
+      const fname = document.getElementById('fname').value;
+      const lname = document.getElementById('lname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      e.preventDefault();  // Prevent default form submission
+      // Replace these placeholders with your actual Firebase authentication code
+      if (!fnamevalidation()) {
+        return;  // Prevent form submission if first name is invalid
+      }
+      if (!emailvalidation()) {
+        return;  // Prevent form submission if email is invalid
+      }
+      if (!lnamevalidation()) {
+        return;  // Prevent form submission if first name is invalid
+      }
+      if (!passwordvalidation()) {
+        return;  // Prevent form submission if password is invalid
+      }
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          set(ref(db, 'UsersAuthList/' + userCredential.user.uid), {
+            firstname: fname,
+            lastname: lname,
+          })
+          console.log(userCredential);
+          alert('User Registered Successfully');
+          regicon.style.display = 'none';
+          loginicon.style.display = 'none';
+          // ... your additional logic after successful registration
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          alert(errorMessage);
+          // ... your error handling logic
+        });
+    }
+
+  
