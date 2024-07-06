@@ -79,7 +79,6 @@
   document.getElementById('logout').addEventListener('click', () => {
       try{
           auth.signOut();
-          alert('User logged out successfully');
           window.location.href = 'register.html';
       }
       catch(error){

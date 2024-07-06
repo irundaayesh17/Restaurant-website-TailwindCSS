@@ -66,7 +66,6 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
   document.getElementById('logoutL').addEventListener('click', () => {
     try{
         auth.signOut();
-        alert('User logged out successfully');
         window.location.href = 'login.html';
     }
     catch(error){
