@@ -39,9 +39,9 @@
             </ul>
         </nav>
         
-        <div class="buttons">
-            <a href="#" class="loginbtn" id="register">Sign Up</a>
-            <a href="#" class="loginbtn" id="login">Log in</a>
+        <div class="headbuttons">
+            <a href="#" class="inline-block rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="registerH"" id="registerL">Sign Up</a>
+            <a href="#" class="inline-block rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="loginH"" id="loginL">Log in</a>
         </div>
     </header>
     <!-- header end -->
@@ -51,14 +51,18 @@
                 <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain hidden xl:block">
             </div>
             <div class="flex items-center md:mt-10 xl:ml-6 md:mb-10 mt-[-16px] md:mx-auto md:px-24 xl:px-0 xl:pr-8">
-                <div class="bg-white md:bg-slate-100 p-8  md:rounded-lg md:shadow-lg md:max-w-md " id="registerform">
+                <div class="bg-white md:bg-slate-100 p-8  md:rounded-lg md:shadow-lg md:max-w-md " id="loginform">
                     <h2 class="font-semibold text-xl">Sign in</h2>
-                    <input type="email" id="email" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
+                    <input type="email" id="emailL" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
                     <span id="emailerror" class="text-red-600 text-sm"></span>
-                    <input type="password" id="password" class="w-full border border-gray-300 p-2 mt-3" placeholder="Password">
+                    <input type="password" id="passwordL" class="w-full border border-gray-300 p-2 mt-3" placeholder="Password">
                     <span id="passerror" class="text-red-600 text-sm"></span><br>
                     <input type="checkbox" id="showpass" class="mt-3"> Show Password
-                    <button onclick="login()" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Log in</button>
+                    <button id="loginbutton" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Log in</button>
+                </div>
+                <div class=" justify-center items-center w-full md:w-auto h-68 py-24 md:py-0 md:h-auto  grid grid-rows-2 gap-2">
+                    <h4 id="useremailL" class="text-2xl font-custom3 font-semibold text-black"></h4>
+                    <button id="logoutL" class="text-2xl font-custom3 rounded-md bg-red-600 py-2 px-10 font-semibold text-white hidden ">Logout</button>
                 </div>
             </div>
         </div>
@@ -107,6 +111,7 @@
     </footer>
 
     <!-- footer end -->
+    <script type="module" src="firebase-login.js"></script>
     <script src="login.js"></script>
 </body>
 </html>

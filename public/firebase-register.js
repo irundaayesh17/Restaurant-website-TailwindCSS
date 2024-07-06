@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
   import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,7 +24,6 @@
   const auth = getAuth(app);
   const analytics = getAnalytics(app);
 
-document.addEventListener('DOMContentLoaded', function() {
     const registericon = document.getElementById('registerH');
     const loginicon = document.getElementById('loginH');
     const regform = document.getElementById('registerform');
@@ -72,8 +71,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
-        alert(errorMessage);
+        alert('User registration failed');
         // ..
       });
   });
-});
+
+  document.getElementById('logout').addEventListener('click', () => {
+      try{
+          auth.signOut();
+          alert('User logged out successfully');
+          window.location.href = 'register.html';
+      }
+      catch(error){
+          console.log(error);
+          alert('User logout failed');
+      }
+  });
+
+

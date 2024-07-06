@@ -11,18 +11,18 @@ const showpass = document.getElementById('showpass');
 
 function showpassword(){
     if(showpass.checked){
-        document.getElementById('password').type = 'text';
+        document.getElementById('passwordL').type = 'text';
         document.getElementById('cpassword').type = 'text';
     }
     else{
-        document.getElementById('password').type = 'password';
+        document.getElementById('passwordL').type = 'password';
         document.getElementById('cpassword').type = 'password';
     }
 }
 showpass.addEventListener('click', showpassword);
 
-const email = document.getElementById('email'); 
-const password = document.getElementById('password');
+const email = document.getElementById('emailL'); 
+const password = document.getElementById('passwordL');
 
 email.addEventListener('input', emailvalidation);
 password.addEventListener('input', passwordvalidation);
@@ -72,16 +72,6 @@ function menu(e){
         navbarr.style.pointerEvents = 'none'; // Disable pointer events when navbar is invisible
     }
 }   
-
-function login(){
-    if (!emailvalidation()) {
-        return;  // Prevent form submission if email is invalid
-    }
-    if (!passwordvalidation()) {
-        return;  // Prevent form submission if password is invalid
-    }
-    alert('Login Successful');
-}  
 
 //navigations
 //navigaaton header

@@ -128,21 +128,7 @@ function passwordvalidation() {
     return true;
   }
 
-  function register(){
-    if (!fnamevalidation()) {
-        return;  // Prevent form submission if first name is invalid
-    }
-    if (!emailvalidation()) {
-        return;  // Prevent form submission if email is invalid
-    }
-    if (!lnamevalidation()) {
-        return;  // Prevent form submission if first name is invalid
-    }
-    if (!passwordvalidation()) {
-        return;  // Prevent form submission if password is invalid
-    }
-    alert('Registration Successful');
-}     
+   
 
 let navbarr = document.querySelector('ul');
 
