@@ -15,6 +15,7 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      fill: 'fill 2.5s infinite',
     },
     aria: {
       busy: 'busy="true"',
@@ -64,6 +65,7 @@ module.exports = {
       'right-bottom': 'right bottom',
       'right-top': 'right top',
       top: 'top',
+      loader: '0px 140px',
     },
     backgroundSize: {
       auto: 'auto',
@@ -96,6 +98,8 @@ module.exports = {
       '2xl': '1rem',
       '3xl': '1.5rem',
       full: '9999px',
+      'loader': '0px 0px 55px 55px',
+      'handle': '0px 25px 80px 0px',
     },
     borderSpacing: ({ theme }) => ({
       ...theme('spacing'),
@@ -105,6 +109,7 @@ module.exports = {
       0: '0px',
       2: '2px',
       4: '4px',
+      6: '6px',
       8: '8px',
     },
     boxShadow: {
@@ -160,6 +165,7 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      customYellow: 'rgba(255, 198, 76, 1)',
     }),
     columns: {
       auto: 'auto',
@@ -549,6 +555,8 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      'handle': '50px',
+      'cup': '85px',
     }),
     hueRotate: {
       0: '0deg',
@@ -599,6 +607,14 @@ module.exports = {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
+      },
+      fill: {
+          '0%': { backgroundPosition: '0px 140px' },
+          '20%': { backgroundPosition: '-450px 100px' },
+          '40%': { backgroundPosition: '-900px 50px' },
+          '60%': { backgroundPosition: '-1350px 0px' },
+          '80%': { backgroundPosition: '-1800px -50px' },
+          '100%': { backgroundPosition: '-1800px -50px' },
       },
     },
     letterSpacing: {
@@ -881,6 +897,9 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      '2/5': '40%',
+      'handle': '128px',
+      'handleT': '-5px',
     },
     stroke: ({ theme }) => ({
       none: 'none',
@@ -1048,6 +1067,8 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      'handle': '35px',
+      'cup': '130px',
     }),
     willChange: {
       auto: 'auto',
@@ -1063,6 +1084,7 @@ module.exports = {
       30: '30',
       40: '40',
       50: '50',
+      100: '100',
     },
     
   },

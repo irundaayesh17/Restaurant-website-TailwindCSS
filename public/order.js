@@ -33,10 +33,10 @@ document.getElementById('menu').addEventListener('click', function() {
   document.getElementById('about').addEventListener('click', function() {
     window.location.href = 'about.html';
   });
-  document.getElementById('register').addEventListener('click', function() {
+  document.getElementById('registerBTN').addEventListener('click', function() {
     window.location.href = 'register.html';
   });
-  document.getElementById('login').addEventListener('click', function() {
+  document.getElementById('loginBTN').addEventListener('click', function() {
     window.location.href = 'login.html';
   });
   document.getElementById('home').addEventListener('click', function() {

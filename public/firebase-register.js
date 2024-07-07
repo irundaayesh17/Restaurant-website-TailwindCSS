@@ -35,16 +35,22 @@
     if(user){
         logout.classList.remove('hidden');
         useremail.innerHTML = user.email;
-        registericon.classList.add('hidden');
-        loginicon.classList.add('hidden');
+        registericon.style.visibility ='hidden';
+        loginicon.style.visibility ='hidden';
         regform.classList.add('hidden');
+        //remove interactions
+        registericon.style.pointerEvents ='none';
+        loginicon.style.pointerEvents ='none';
     }
     else{
-        registericon.classList.remove('hidden');
+        registericon.style.visibility='visible';
+        loginicon.style.visibility='visible';
         useremail.innerHTML = '';
         logout.classList.add('hidden');
-        loginicon.classList.remove('hidden');
         regform.classList.remove('hidden');
+        //add interactions
+        registericon.style.pointerEvents ='auto';
+        loginicon.style.pointerEvents ='auto';
     }
   });
 
@@ -63,7 +69,6 @@
         });
         const user = userCredential.user;
         console.log(user);
-        alert('User registered successfully');
         window.location.href = 'register.html';
         // ...
       })

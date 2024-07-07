@@ -35,16 +35,22 @@ onAuthStateChanged(auth, (user) => {
     if(user){
         llogout.classList.remove('hidden');
         luseremail.innerHTML = user.email;
-        Lregistericon.classList.add('hidden');
-        Lloginicon.classList.add('hidden');
+        Lregistericon.style.visibility ='hidden';
+        Lloginicon.style.visibility ='hidden';
         logform.classList.add('hidden');
+        //remove interactions
+        Lregistericon.style.pointerEvents ='none';
+        Lloginicon.style.pointerEvents ='none';
     }
     else{
-        Lregistericon.classList.remove('hidden');
+        Lregistericon.style.visibility='visible';
         luseremail.innerHTML = '';
         llogout.classList.add('hidden');
-        Lloginicon.classList.remove('hidden');
+        Lloginicon.style.visibility='visible';
         logform.classList.remove('hidden');
+        //add interactions
+        Lregistericon.style.pointerEvents ='auto';
+        Lloginicon.style.pointerEvents ='auto';
     }
   });
 
