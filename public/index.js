@@ -81,50 +81,10 @@ if (target) {
   observer.observe(target); // Start observing
 }
 
-//navigations
-//navigaaton header
-document.getElementById('menu').addEventListener('click', function() {
-  window.location.href = 'menu.html';
-});
-document.getElementById('about').addEventListener('click', function() {
-  window.location.href = 'about.html';
-});
-document.getElementById('registerBTN').addEventListener('click', function() {
-  window.location.href = 'register.html';
-});
-document.getElementById('loginBTN').addEventListener('click', function() {
-  window.location.href = 'login.html';
-});
-document.getElementById('home').addEventListener('click', function() {
-  window.location.href = 'index.html';
-});
-document.getElementById('contact').addEventListener('click', function() {
-  window.location.href = 'contact.html';
-});
-document.getElementById('order').addEventListener('click', function() {
-  window.location.href = 'order.html';
-});
-
-//bannercard navigations
-document.querySelectorAll('.ordernow-cards').forEach(function(element) {
-  element.addEventListener('click', function() {
-    window.location.href = 'order.html';
-  });
-});
 //bannermenu cards navigations
 document.querySelectorAll('.banner-card').forEach(function(element) {
   element.addEventListener('click', function() {
     window.location.href = 'menu.html';
   });
-});
-//home-menu navigations
-document.querySelectorAll('.ordernow').forEach(function(element) {
-  element.addEventListener('click', function() {
-    window.location.href = 'order.html';
-  });
-});
-//viewmore navigations
-document.getElementById('viewmore').addEventListener('click', function() {
-  window.location.href = 'menu.html';
 });
 
