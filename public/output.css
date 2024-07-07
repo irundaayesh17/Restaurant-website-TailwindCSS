@@ -1132,6 +1132,10 @@ video {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
+.bg-custom{
+  background-image: url(https://i.ibb.co/VWsBT2J/headerbg.png);
+}
+
 .bg-contain{
   background-size: contain;
 }

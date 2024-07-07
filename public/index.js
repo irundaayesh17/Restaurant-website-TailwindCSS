@@ -82,37 +82,5 @@ if (target) {
 }
 
 //bannermenu cards navigations
-const divWithHref = document.getElementById('banner-card1');
-        
-  if (divWithHref) {
-    divWithHref.addEventListener('click', function() {
-      const href = this.getAttribute('data-href');
-                
-      if (href) {
-          window.location.href = href; // Navigate to the specified URL
-      }
-    });
-  }
-  const divWithHref2 = document.getElementById('banner-card2');
-        
-  if (divWithHref2) {
-    divWithHref2.addEventListener('click', function() {
-      const href = this.getAttribute('data-href');
-                
-      if (href) {
-          window.location.href = href; // Navigate to the specified URL
-      }
-    });
-  }
-  const divWithHref3 = document.getElementById('banner-card3');
-        
-  if (divWithHref3) {
-    divWithHref3.addEventListener('click', function() {
-      const href = this.getAttribute('data-href');
-                
-      if (href) {
-          window.location.href = href; // Navigate to the specified URL
-      }
-    });
-  }
+
 
