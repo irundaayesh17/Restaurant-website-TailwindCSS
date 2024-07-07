@@ -1604,6 +1604,10 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-customYellow:hover{
+  background-color: rgba(255, 198, 76, 1);
+}
+
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
