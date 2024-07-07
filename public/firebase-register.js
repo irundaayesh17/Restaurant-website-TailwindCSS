@@ -29,6 +29,7 @@
     const regform = document.getElementById('registerform');
     const logout = document.getElementById('logout');
     const useremail = document.getElementById('useremail');
+    const loadingscreen = document.getElementById('loadingScreen');
 
   onAuthStateChanged(auth, (user) => {
     console.log(user);
@@ -52,6 +53,8 @@
         registericon.style.pointerEvents ='auto';
         loginicon.style.pointerEvents ='auto';
     }
+    loadingscreen.classList.add('hidden');
+
   });
 
   document.getElementById('registerbutton').addEventListener('click', (e) => {
@@ -69,7 +72,7 @@
         });
         const user = userCredential.user;
         console.log(user);
-        window.location.href = 'register.html';
+       
         // ...
       })
       .catch((error) => {
@@ -84,7 +87,6 @@
   document.getElementById('logout').addEventListener('click', () => {
       try{
           auth.signOut();
-          window.location.href = 'register.html';
       }
       catch(error){
           console.log(error);
