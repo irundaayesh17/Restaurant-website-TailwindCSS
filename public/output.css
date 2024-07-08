@@ -1132,10 +1132,6 @@ video {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
-.bg-custom{
-  background-image: url(https://i.ibb.co/VWsBT2J/headerbg.png);
-}
-
 .bg-contain{
   background-size: contain;
 }
@@ -1579,6 +1575,10 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-customYellow:hover{
+  background-color: rgba(255, 198, 76, 1);
+}
+
 .hover\:bg-gray-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1602,10 +1602,6 @@ video {
 .hover\:bg-slate-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-customYellow:hover{
-  background-color: rgba(255, 198, 76, 1);
 }
 
 .hover\:text-black:hover{

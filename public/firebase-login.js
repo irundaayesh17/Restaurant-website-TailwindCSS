@@ -29,6 +29,7 @@ const Lloginicon = document.getElementById('loginL');
 const logform = document.getElementById('loginform');
 const llogout = document.getElementById('logoutL');
 const luseremail = document.getElementById('useremailL');
+const loadingscreen = document.getElementById('loadingScreen');
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
@@ -52,6 +53,7 @@ onAuthStateChanged(auth, (user) => {
         Lregistericon.style.pointerEvents ='auto';
         Lloginicon.style.pointerEvents ='auto';
     }
+    loadingscreen.classList.add('hidden');
   });
 
 document.getElementById('loginbutton').addEventListener('click', async(e) => {
@@ -72,7 +74,6 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
   document.getElementById('logoutL').addEventListener('click', () => {
     try{
         auth.signOut();
-        window.location.href = 'login.html';
     }
     catch(error){
         console.log(error);

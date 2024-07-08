@@ -26,27 +26,5 @@ function menu(e){
     }
 }   
 
-//navigations
-//navigaaton header
-document.getElementById('menu').addEventListener('click', function() {
-    window.location.href = 'menu.html';
-  });
-  document.getElementById('about').addEventListener('click', function() {
-    window.location.href = 'about.html';
-  });
-  document.getElementById('registerBTN').addEventListener('click', function() {
-    window.location.href = 'register.html';
-  });
-  document.getElementById('loginBTN').addEventListener('click', function() {
-    window.location.href = 'login.html';
-  });
-  document.getElementById('home').addEventListener('click', function() {
-    window.location.href = 'index.html';
-  });
-  document.getElementById('contact').addEventListener('click', function() {
-    window.location.href = 'contact.html';
-  });
-  document.getElementById('order').addEventListener('click', function() {
-    window.location.href = 'order.html';
-  });
+
   
