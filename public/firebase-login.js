@@ -60,13 +60,32 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
     e.preventDefault();
     const loginemail = document.getElementById('emailL').value;
     const loginpassword = document.getElementById('passwordL').value;
+    const passworderror = document.getElementById('passerror');  
+    const emailerror = document.getElementById('emailerror');
     
     try{
         await signInWithEmailAndPassword(auth, loginemail, loginpassword);
     }
     catch(error){
-        console.log(error);
-        alert('Login failed');
+        console.log(error.code);
+        if(error.code === 'auth/invalid-email' || error.code === 'auth/user-not-found'){
+            emailerror.innerHTML = 'Invalid email';
+            passworderror.innerHTML = '';
+        }
+        else if(error.code === 'auth/too-many-requests'){
+            alert('Too many requests, try again later');
+            emailerror.innerHTML = '';
+            passworderror.innerHTML = '';
+        }
+        else if(error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential' || error.code === 'auth/missing-password'){
+            emailerror.innerHTML = '';
+            passworderror.innerHTML = 'Incorrect password';
+        }
+        else{
+            alert('Try Again Later');
+            emailerror.innerHTML = '';
+            passworderror.innerHTML = '';
+        }
     }
     
   });

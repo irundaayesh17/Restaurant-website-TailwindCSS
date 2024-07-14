@@ -63,6 +63,10 @@
     const lname = document.getElementById('lname').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const cpassword = document.getElementById('cpassword').value;
+    const emailerror = document.getElementById('emailerror');
+    const passworderror = document.getElementById('passerror');
+    const cpassworderror = document.getElementById('cpasserror');
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -72,14 +76,39 @@
         });
         const user = userCredential.user;
         console.log(user);
+
+        document.getElementById('fname').value = '';
+        document.getElementById('lname').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('cpassword').value = '';
+        document.getElementById('fnameerror').innerHTML = '';
+        document.getElementById('lnameerror').innerHTML = '';
+        document.getElementById('emailerror').innerHTML = '';
+        document.getElementById('passerror').innerHTML = '';
+        document.getElementById('cpasserror').innerHTML = '';
        
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        alert('User registration failed');
+        if(errorCode === 'auth/email-already-in-use'){
+          emailerror.innerHTML = 'Email already in use';
+        }
+        else if(errorCode === 'auth/invalid-email'){
+          emailerror.innerHTML = 'Invalid email';
+        }
+        else if(errorCode === 'auth/weak-password'){
+          passworderror.innerHTML = 'Weak password';
+          cpassworderror.innerHTML = '';
+        }
+        else if(errorCode === 'auth/missing-password'){
+          passworderror.innerHTML = 'Password is required';
+          cpassworderror.innerHTML = 'Password is required';
+        }
+        else if(errorCode === 'auth/too-many-requests'){
+          alert('Too many requests, try again later');
+        }
         // ..
       });
   });

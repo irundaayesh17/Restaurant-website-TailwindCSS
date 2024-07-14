@@ -46,12 +46,8 @@
     </header>
     <!-- header end -->
     <main class="pt-32 z-50">
-        <div class="md:grid xl:grid-cols-2 xl:gap-10 ">
-            <div class="md:ml-32">
-                <img src="img/reg.png" alt="Food House Logo" class="md:h-auto w-auto object-contain hidden xl:block">
-            </div>
-            <div class="flex items-center md:mt-10 xl:ml-6 lg:mb-10 mt-[-16px] md:mx-auto md:px-24 xl:px-0 xl:pr-8">
-                <div class="bg-white md:bg-slate-100 p-8  md:rounded-lg md:shadow-lg md:w-full lg:max-w-md hidden" id="registerform">
+            <div class="flex items-center md:mt-10 mt-[-16px] md:mx-auto md:px-24 justify-center">
+                <div class="bg-white md:bg-slate-50 p-8  md:rounded-lg md:shadow-md md:w-full lg:max-w-md hidden" id="registerform">
                         <h2 class="font-semibold text-xl font-custom3 text-center md:text-left mb-4 md:mb-0">Register</h2>
                         <input type="text" id="fname" class="w-full border border-gray-300 p-2 mt-3 md:py-4 lg:py-2" placeholder="First Name">
                         <span id="fnameerror" class="text-red-600 text-sm"></span>
@@ -67,12 +63,11 @@
                         <button onclick="generatepass()" class="w-full bg-green-500 hover:bg-green-600 hover:transition-transform duration-200 text-white p-2 mt-4 rounded-3xl py-3 lg:py-2 ">Generate Password</button>
                         <button id="registerbutton" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl py-3 lg:py-2">Register</button>
                 </div>
-                <div class=" justify-center items-center w-full md:w-auto h-68 py-24 md:py-0 md:h-auto  grid grid-rows-2 gap-2">
+                <div class=" justify-center items-center w-full md:w-auto h-68 py-24 md:py-28 md:h-auto  grid grid-rows-2 gap-2">
                     <h4 id="useremail" class="text-2xl font-custom3 font-semibold text-black"></h4>
                     <button id="logout" class="text-2xl font-custom3 rounded-md bg-red-600 py-2 px-10 font-semibold text-white hidden ">Logout</button>
                 </div>
             </div>
-        </div>
     </main>
     <!-- footer -->
     <footer class="footer px-4 0 mt-16" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');">
