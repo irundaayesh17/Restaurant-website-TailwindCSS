@@ -22,6 +22,7 @@ submenu.style.zIndex = '-1';
 submenu.style.pointerEvents = 'none';
 
 function subMenu(e) {
+  
     if (e.name === 'dropdown-menu') {
         e.name = 'closemenu';
         submenu.classList.toggle('opacity-100');

@@ -28,6 +28,8 @@ const loadingscreen = document.getElementById('loadingScreen');
 const registerBtn = document.getElementById('registerBTN');
 const loginBtn = document.getElementById('loginBTN');
 const submenubtn = document.getElementById('sub-menu-button');
+const logoutBtn = document.getElementById('logout-subbtn');
+const sub_menu = document.getElementById('sub-menu');
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
@@ -35,6 +37,7 @@ onAuthStateChanged(auth, (user) => {
         registerBtn.classList.add('hidden');
         loginBtn.classList.add('hidden');
         submenubtn.classList.remove('hidden');
+        sub_menu.classList.remove('hidden');
         //remove interactions
         registerBtn.style.pointerEvents ='none';
         loginBtn.style.pointerEvents ='none';
@@ -43,9 +46,34 @@ onAuthStateChanged(auth, (user) => {
         registerBtn.classList.remove('hidden');
         loginBtn.classList.remove('hidden');
         submenubtn.classList.add('hidden');
+        sub_menu.classList.add('hidden');
         //remove interactions
         registerBtn.style.pointerEvents ='auto';
         loginBtn.style.pointerEvents ='auto';
     }
     loadingscreen.classList.add('hidden');
+});
+
+document.getElementById('logout-subbtn').addEventListener('click', () => {
+    try{
+        loadingscreen.classList.remove('hidden');
+        
+        // Set a timeout to log out the user after 2 seconds
+        setTimeout(() => {
+            auth.signOut().then(() => {
+                window.location.reload();
+                console.log('User logout successful');
+                //window.location.reload();
+            }).catch(error => {
+                console.log(error);
+                alert('User logout failed');
+                // Hide the loading screen if logout fails
+                loadingscreen.classList.add('hidden');
+            });
+        }, 1000); // 2000 milliseconds = 2 seconds
+    }
+    catch(error){
+        console.log(error);
+        alert('User logout failed');
+    }
 });
