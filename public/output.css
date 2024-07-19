@@ -913,6 +913,10 @@ video {
   width: 35px;
 }
 
+.w-48{
+  width: 12rem;
+}
+
 .max-w-64{
   max-width: 16rem;
 }
@@ -1001,6 +1005,10 @@ video {
 
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-end{
