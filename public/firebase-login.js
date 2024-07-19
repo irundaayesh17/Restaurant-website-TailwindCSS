@@ -30,25 +30,28 @@ const logform = document.getElementById('loginform');
 const llogout = document.getElementById('logoutL');
 const luseremail = document.getElementById('useremailL');
 const loadingscreen = document.getElementById('loadingScreen');
+const submenubtn = document.getElementById('sub-menu-button');
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
     if(user){
         llogout.classList.remove('hidden');
         luseremail.innerHTML = user.email;
-        Lregistericon.style.visibility ='hidden';
-        Lloginicon.style.visibility ='hidden';
+        Lregistericon.classList.add('hidden');
+        Lloginicon.classList.add('hidden');
         logform.classList.add('hidden');
+        submenubtn.classList.remove('hidden');
         //remove interactions
         Lregistericon.style.pointerEvents ='none';
         Lloginicon.style.pointerEvents ='none';
     }
     else{
-        Lregistericon.style.visibility='visible';
+        Lregistericon.classList.remove('hidden');
         luseremail.innerHTML = '';
         llogout.classList.add('hidden');
-        Lloginicon.style.visibility='visible';
+        Lloginicon.classList.remove('hidden');
         logform.classList.remove('hidden');
+        submenubtn.classList.add('hidden');
         //add interactions
         Lregistericon.style.pointerEvents ='auto';
         Lloginicon.style.pointerEvents ='auto';

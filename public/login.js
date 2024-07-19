@@ -44,3 +44,17 @@ function menu(e){
     }
 }   
 
+function subMenu(e) {
+    let submenu = document.getElementById('sub-menu-wrap');
+
+    if (e.name === 'dropdown-menu') {
+        e.name = 'closemenu';
+        submenu.classList.remove('opacity-0', 'pointer-events-none');
+        submenu.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+        e.name = 'dropdown-menu';
+        submenu.classList.remove('opacity-100', 'pointer-events-auto');
+        submenu.classList.add('opacity-0', 'pointer-events-none');
+    }
+}
+

@@ -27,19 +27,22 @@ const loadingscreen = document.getElementById('loadingScreen');
 
 const registerBtn = document.getElementById('registerBTN');
 const loginBtn = document.getElementById('loginBTN');
+const submenubtn = document.getElementById('sub-menu-button');
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
     if(user){
-        registerBtn.style.visibility ='hidden';
-        loginBtn.style.visibility ='hidden';
+        registerBtn.classList.add('hidden');
+        loginBtn.classList.add('hidden');
+        submenubtn.classList.remove('hidden');
         //remove interactions
         registerBtn.style.pointerEvents ='none';
         loginBtn.style.pointerEvents ='none';
     }
     else{
-        registerBtn.style.visibility ='visible';
-        loginBtn.style.visibility ='visible';
+        registerBtn.classList.remove('hidden');
+        loginBtn.classList.remove('hidden');
+        submenubtn.classList.add('hidden');
         //remove interactions
         registerBtn.style.pointerEvents ='auto';
         loginBtn.style.pointerEvents ='auto';

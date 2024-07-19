@@ -16,6 +16,7 @@ module.exports = {
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
       fill: 'fill 2.5s infinite',
+      roll_down: 'roll_down 0.3s ease-out',
     },
     aria: {
       busy: 'busy="true"',
@@ -101,6 +102,7 @@ module.exports = {
       full: '9999px',
       'loader': '0px 0px 55px 55px',
       'handle': '0px 25px 80px 0px',
+      'profile': '50px',
     },
     borderSpacing: ({ theme }) => ({
       ...theme('spacing'),
@@ -109,6 +111,7 @@ module.exports = {
       DEFAULT: '1px',
       0: '0px',
       2: '2px',
+      3: '3px',
       4: '4px',
       6: '6px',
       8: '8px',
@@ -617,6 +620,10 @@ module.exports = {
           '80%': { backgroundPosition: '-1800px -50px' },
           '100%': { backgroundPosition: '-1800px -50px' },
       },
+      roll_down: {
+        '0%': { transform: 'translateY(-50%)' },
+        '100%': { transform: 'translateY(0)' },
+      },
     },
     letterSpacing: {
       tighter: '-0.05em',
@@ -1079,6 +1086,7 @@ module.exports = {
     },
     zIndex: {
       auto: 'auto',
+      '-1': '-1',
       0: '0',
       10: '10',
       20: '20',

@@ -30,22 +30,25 @@
     const logout = document.getElementById('logout');
     const useremail = document.getElementById('useremail');
     const loadingscreen = document.getElementById('loadingScreen');
+    const submenubtn = document.getElementById('sub-menu-button');
 
   onAuthStateChanged(auth, (user) => {
     console.log(user);
     if(user){
         logout.classList.remove('hidden');
         useremail.innerHTML = user.email;
-        registericon.style.visibility ='hidden';
-        loginicon.style.visibility ='hidden';
+        registericon.classList.add('hidden');
+        loginicon.classList.add('hidden');
         regform.classList.add('hidden');
+        submenubtn.classList.remove('hidden');
         //remove interactions
         registericon.style.pointerEvents ='none';
         loginicon.style.pointerEvents ='none';
     }
     else{
-        registericon.style.visibility='visible';
-        loginicon.style.visibility='visible';
+        registericon.classList.remove('hidden');
+        loginicon.classList.remove('hidden');
+        submenubtn.classList.add('hidden');
         useremail.innerHTML = '';
         logout.classList.add('hidden');
         regform.classList.remove('hidden');
