@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -32,11 +32,29 @@ const luseremail = document.getElementById('useremailL');
 const loadingscreen = document.getElementById('loadingScreen');
 const submenubtn = document.getElementById('sub-menu-button');
 const sub_menu = document.getElementById('sub-menu-wrap');
+const showfname = document.getElementById('userFirstNameDisplay');
 
+const updateLocalStorage = (user) => {
+    get(child(ref(db), `users/${user.uid}`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        const userData = snapshot.val();
+        localStorage.setItem('user-info', JSON.stringify({
+          firstname: userData.fname,
+          lastname: userData.lname,
+        }));
+        showfname.innerHTML = userData.fname;
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error("Error fetching user data: ", error);
+    });
+  };
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
     if(user){
+        updateLocalStorage(user);
         llogout.classList.remove('hidden');
         luseremail.innerHTML = user.email;
         Lregistericon.classList.add('hidden');
@@ -59,6 +77,7 @@ onAuthStateChanged(auth, (user) => {
         //add interactions
         Lregistericon.style.pointerEvents ='auto';
         Lloginicon.style.pointerEvents ='auto';
+        localStorage.removeItem('user-info');
     }
     loadingscreen.classList.add('hidden');
   });
@@ -71,7 +90,9 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
     const emailerror = document.getElementById('emailerror');
     
     try{
-        await signInWithEmailAndPassword(auth, loginemail, loginpassword);
+        const userCredential = await signInWithEmailAndPassword(auth, loginemail, loginpassword);
+        const user = userCredential.user;
+        updateLocalStorage(user);
         loadingscreen.classList.remove('hidden');
         
         // Set a timeout to hide the loading screen and refresh the page after 1 minute

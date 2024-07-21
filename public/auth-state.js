@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -30,10 +30,29 @@ const loginBtn = document.getElementById('loginBTN');
 const submenubtn = document.getElementById('sub-menu-button');
 const logoutBtn = document.getElementById('logout-subbtn');
 const sub_menu = document.getElementById('sub-menu');
+const showfname = document.getElementById('userFirstNameDisplay');
+
+const fetchAndDisplayUserData = (user) => {
+    loadingscreen.classList.remove('hidden'); // Show loading screen
+    const userRef = ref(db, `users/${user.uid}`);
+    get(userRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        const userData = snapshot.val();
+        showfname.innerHTML = userData.fname; // Display user's first name
+      } else {
+        showfname.innerHTML = 'User'; // Default if no data is available
+      }
+      loadingscreen.classList.add('hidden'); // Hide loading screen
+    }).catch((error) => {
+      console.error("Error fetching user data: ", error);
+      showfname.innerHTML = 'User'; // Default on error
+    });
+  };
 
 onAuthStateChanged(auth, (user) => {
     console.log(user);
     if(user){
+        fetchAndDisplayUserData(user);
         registerBtn.classList.add('hidden');
         loginBtn.classList.add('hidden');
         submenubtn.classList.remove('hidden');
@@ -50,8 +69,9 @@ onAuthStateChanged(auth, (user) => {
         //remove interactions
         registerBtn.style.pointerEvents ='auto';
         loginBtn.style.pointerEvents ='auto';
+        loadingscreen.classList.add('hidden');
     }
-    loadingscreen.classList.add('hidden');
+    //loadingscreen.classList.add('hidden');
 });
 
 document.getElementById('logout-subbtn').addEventListener('click', () => {

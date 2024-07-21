@@ -17,6 +17,8 @@ module.exports = {
       bounce: 'bounce 1s infinite',
       fill: 'fill 2.5s infinite',
       roll_down: 'roll_down 0.3s ease-out',
+      slidein: 'slidein 0.5s ease-out forwards',
+      slideout: 'slideout 0.5s ease-in forwards',
     },
     aria: {
       busy: 'busy="true"',
@@ -623,6 +625,14 @@ module.exports = {
       roll_down: {
         '0%': { transform: 'translateY(-50%)' },
         '100%': { transform: 'translateY(0)' },
+      },
+      slidein: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
+      },
+      slideout: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-100%)' },
       },
     },
     letterSpacing: {
