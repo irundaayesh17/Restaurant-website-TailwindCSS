@@ -672,10 +672,6 @@ video {
   margin: auto;
 }
 
-.m-4{
-  margin: 1rem;
-}
-
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -868,21 +864,6 @@ video {
   height: max-content;
 }
 
-.size-9\/12{
-  width: 75%;
-  height: 75%;
-}
-
-.size-5\/12{
-  width: 41.666667%;
-  height: 41.666667%;
-}
-
-.size-4\/12{
-  width: 33.333333%;
-  height: 33.333333%;
-}
-
 .h-12{
   height: 3rem;
 }
@@ -905,14 +886,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-64{
-  height: 16rem;
-}
-
-.h-56{
-  height: 14rem;
 }
 
 .max-h-full{
@@ -950,10 +923,6 @@ video {
 
 .w-handle{
   width: 35px;
-}
-
-.w-80{
-  width: 20rem;
 }
 
 .max-w-64{
@@ -1054,14 +1023,6 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-auto-fit{
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-}
-
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-rows-2{
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -1120,10 +1081,6 @@ video {
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-6{
-  gap: 1.5rem;
 }
 
 .gap-x-1{
@@ -1297,11 +1254,6 @@ video {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-contain{
   background-size: contain;
 }
@@ -1358,10 +1310,6 @@ video {
 
 .p-8{
   padding: 2rem;
-}
-
-.p-10{
-  padding: 2.5rem;
 }
 
 .px-10{
@@ -1682,12 +1630,6 @@ video {
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2456,16 +2398,8 @@ video {
     display: grid;
   }
 
-  .xl\:h-auto{
-    height: auto;
-  }
-
   .xl\:max-h-full{
     max-height: 100%;
-  }
-
-  .xl\:w-auto{
-    width: auto;
   }
 
   .xl\:max-w-full{
