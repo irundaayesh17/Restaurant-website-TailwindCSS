@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-<body  class="">
+<body  class="bg-slate-100">
     <div id="loadingScreen" class="bg-customYellow w-full h-screen fixed z-100 bg-center bg-no-repeat" style="background-image: url('https://i.postimg.cc/T2Dhm38J/loading.gif');"></div>
     <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-100">
         <div class="flex justify-between items-center">
@@ -71,10 +71,24 @@
         
     </header>
     <!-- header end -->
-    <section class="flex justify-center items-center h-screen">
-        <div style="background-image: url('https://i.postimg.cc/7Z830VnB/building.gif'); width: 100px; height: 100px; background-size: cover;">
+    <div class="contact-container py-32 h-screen flex items-center justify-evenly">
+        <form class="contact-left flex flex-col items-start gap-5" method="POST" id="form">
+            <input type="hidden" name="access_key" value="ef62ad24-34df-4140-8ab6-a0253d4b5a3d">
+            <div class="contact-title font-custom3 text-3xl font-bold">
+                <h1>Contact Us</h1>
+            </div>
+            <hr class="w-32 h-1 bg-customYellow rounded-lg mb-1">
+            <input type="text" placeholder="Name" id="name" class="contact-input w-96 h-12  border-none outline-none pl-6 font-medium text-yellow-600 rounded-profile text-sm" required>
+            <input type="email" placeholder="Email" id="email" class="contact-input w-96 h-12 border-none outline-none pl-6 font-medium text-yellow-600 rounded-profile text-sm" required>
+            <textarea name="message" id="message" placeholder="Message" class="contact-input w-96 border-none outline-none pl-6 font-medium text-yellow-600 rounded-2xl h-36 text-sm pt-4" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button type="submit" class="flex items-center py-subY px-subX bg-customYellow hover:bg-customyellowhover duration-200 hover:text-white border-none rounded-profile cursor-pointer text-base font-semibold text-gray-950" id="submit">Submit <img src="img\arrow_icon.png" class="h-subY pl-4" alt=""></button>
+            <div id="result" class="font-medium "></div>
+        </form>
+        <div class="contact-right hidden lg:block">
+            <img src="img\right_img.png" class=" w-500" alt="">
         </div>
-    </section>
+    </div>
     <!-- footer -->
     <footer class="footer px-4 0 mt-16" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');">
         <div class="container mx-auto py-14 px-6">

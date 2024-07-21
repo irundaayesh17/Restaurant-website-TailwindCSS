@@ -172,6 +172,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       customYellow: 'rgba(255, 198, 76, 1)',
+      customyellowhover: 'rgba(233, 161, 10, 1)',
     }),
     columns: {
       auto: 'auto',
@@ -920,6 +921,8 @@ module.exports = {
       '2/5': '40%',
       'handle': '128px',
       'handleT': '-5px',
+      'subY': '15px',
+      'subX': '30px',
     },
     stroke: ({ theme }) => ({
       none: 'none',
@@ -1089,6 +1092,7 @@ module.exports = {
       fit: 'fit-content',
       'handle': '35px',
       'cup': '130px',
+      '500': '500px',
     }),
     willChange: {
       auto: 'auto',

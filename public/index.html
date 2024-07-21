@@ -14,7 +14,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="output.css">    
 </head>
-<body class="">
+<body class="bg-slate-100">
     <div id="loadingScreen" class="bg-customYellow w-full h-screen fixed z-100 bg-center bg-no-repeat" style="background-image: url('https://i.postimg.cc/T2Dhm38J/loading.gif');"></div>
     <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-100">
         <div class="flex justify-between items-center">
@@ -85,7 +85,7 @@
                         <a href="order.html" class="ordernow-cards rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
                     </div>
                     <div class="image size-12/12 md:pt-10 mt-0 md:mt-0 -ml-6 md:ml-0">
-                        <img src="img/pasta.png" alt="">
+                        <img src="img/pasta.png" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));" alt="">
                     </div>
                 </div>
                 <div class="md:grid md:grid-cols-2 md:items-center md:flex-wrap md:gap-2 swiper-slide mt-24 md:mt-0" id="slider">
@@ -96,7 +96,7 @@
                         <a href="order.html" class="ordernow-cards rounded-md py-2 px-8 bg-slate-700 text-white">Order Now</a>
                     </div>
                     <div class="image size-12/12 mt-0 md:mt-0 -ml-6 md:ml-0">
-                        <img src="img/noodles.png" alt="">
+                        <img src="img/noodles.png" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));" alt="">
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
     <!-- Menu -->
     <section class="menu md:mt-5 lg:mt-0" id="menucards">
         <section class=" section_container banner container md:mx-auto sm:mx-auto grid gap-4 auto-rows-banner pl-3 pr-3 md:flex mb-16 ">
-            <div class="banner-card p-2 gap-2 bg-green-200 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card1">
+            <div class="banner-card p-2 gap-2 bg-green-200 shadow-xl cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card1">
                 <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">TRY IT OUT TODAY</h1>
                     <p class="text-lg mt-4">Best Meat Burgers <br> From Wide Range</p>
@@ -116,7 +116,7 @@
                     <img src="img/banner1.png" alt="" class="sm:size-11/12 md:size-auto sm:pb-4 md:pb-0 object-cover sm:object-contain">
                 </div>
             </div>
-            <div class="banner-card p-2 gap-2 bg-red-300 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card2">
+            <div class="banner-card p-2 gap-2 bg-red-300 shadow-xl cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card2">
                 <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">BEST FRIED RICE</h1>
                     <p class="text-lg mt-4">Try New Mongolian <br> Fried Rice</p>
@@ -125,7 +125,7 @@
                     <img src="img/banner2.png" alt="" class="sm:size-11/12 md:size-auto sm:pb-4 md:pb-0 object-cover sm:object-contain">
                 </div>
             </div>
-            <div class="banner-card p-2 gap-2 bg-yellow-100 cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card3">
+            <div class="banner-card p-2 gap-2 bg-yellow-100 shadow-xl cursor-pointer" style="display: grid; grid-template-columns: 2fr 2fr; border-radius: 1rem;" id="banner-card3">
                 <div class=" p-2 pl-4">
                     <h1 class="text-xl font-bold">SHAKE YOUR CHOCO SHAKE</h1>
                     <p class="text-lg mt-4 mb-2">Cravings Filled with Chocolate and Caremal</p>
@@ -139,16 +139,16 @@
     <!--menu end-->
     <!-- menulist -->
     <section class="menu_container" id="menulist">
-        <h3 class=" max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white">Always Tasty</h3>
+        <h3 class=" max-w-fit m-auto shadow-lg mb-4 py-2 px-8 font-semibold text-2xl font-custom2 bg-orange-500 rounded-lg text-white">Always Tasty</h3>
         <div class="h-auto md:h-20 items-center justify-center">
         <h2 class="text-6xl font-medium font-custom text-center text-red-950 leading-tight auto-type1" style="text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;" id="auto-type"></h2>
         </div>
-        <p class="  text-center px-6 mt-5 text-lg font-medium md:px-32">
+        <p class="  text-center px-6 mt-5 text-lg font-medium md:px-32 mb-6">
             At Food House, we don’t just serve food; we orchestrate a symphony of flavors that dance on your taste buds. 
             Our cozy bistro is where passion meets palate, where every dish tells a story—a story of love, tradition, and culinary artistry.
         </p>
-        <div class="menu_list grid gap-y-8 gap-x-4 md:grid md:grid-cols-3 md:px-12">
-            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+        <div class="menu_list grid gap-y-8 gap-x-4 md:grid md:grid-cols-3 md:px-12 ">
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300 shadow-md">
                 <div class="menu_img max-w-64 m-auto hover:drop-shadow-lg mb-6 mt-5 md:max-w-72">
                     <img src="img/m4.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
                 </div>
@@ -160,7 +160,7 @@
                     <a href="order.html" class="ordernow rounded-md py-2 px-8 bg-red-700 text-white">Order Now</a>
                 </div>
             </div>
-            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300 shadow-md">
                 <div class="menu_img max-w-80 m-auto hover:drop-shadow-lg mb-6 mt-5">
                     <img src="img/m2.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
                 </div>
@@ -172,7 +172,7 @@
                     <a href="order.html" class="ordernow rounded-md py-2 px-8 bg-red-700 text-white">Order Now</a>
                 </div>
             </div>
-            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300">
+            <div class="menu_card py-8 px-4 hover:shadow-xl transition duration-300 shadow-md">
                 <div class="menu_img max-w-72 m-auto hover:drop-shadow-lg mb-6 mt-5">
                     <img src="img/m5.png" alt="" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
                 </div>
@@ -187,7 +187,9 @@
         </div>
     </section>
     <!-- menulist end -->
-     <div class="border-t border-zinc-500 mt-6 mb-8 px-8"></div>
+    <div class="flex justify-center">
+        <hr class="border-t border-zinc-500 mt-10 mb-8 px-8 w-11/12">
+    </div>
     <!--explore menu-->
     <section class="exploremenu">
         <div class="lg:grid lg:grid-cols-2 lg:gap-2 overflow-hidden">
@@ -199,7 +201,7 @@
                     <h1 class="auto-type2 lg:pt-20 mt-8 lg:mt-5 px-5 md:px-0 text-center lg:text-left font-custom3 font-bold text-3xl md:text-4xl text-red-950" id="auto-type1"></h1>
                 </div>
                 <p class="text-gray-400 font-medium mb-6 leading-7 text-center lg:text-left lg:pr-16 px-8 lg:px-0 mt-3 lg:mt-5">Welcome to FoodHouse, where culinary excellence meets a warm and inviting atmosphere. Our diverse menu features a delightful fusion of classic and contemporary dishes, each crafted with the freshest ingredients and utmost care. Whether you're in the mood for a hearty meal or a light snack, our offerings cater to every palate and preference. Join us for an unforgettable dining experience that will leave you craving for more.</p>
-                <a href="menu.html" class="max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2  rounded-lg  hover:bg-customYellow text-gray-800 flex items-center justify-center lg:justify-start lg:ml-0 lg:mt-8" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');" id="viewmore">View More</a>
+                <a href="menu.html" class="max-w-fit m-auto mb-4 py-2 px-8 font-semibold text-2xl font-custom2  rounded-lg  bg-customYellow hover:bg-customyellowhover duration-300 text-gray-800 flex items-center justify-center lg:justify-start lg:ml-0 lg:mt-8" id="viewmore">View More</a>
             </div>
         </div>
     </section>
