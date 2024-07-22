@@ -106,6 +106,8 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
         if(error.code === 'auth/invalid-email' || error.code === 'auth/user-not-found'){
             emailerror.innerHTML = 'Invalid email';
             passworderror.innerHTML = '';
+            //make inputfield red
+            document.getElementById('emailL').style.border = '2px solid red';
         }
         else if(error.code === 'auth/too-many-requests'){
             alert('Too many requests, try again later');
@@ -115,6 +117,8 @@ document.getElementById('loginbutton').addEventListener('click', async(e) => {
         else if(error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential' || error.code === 'auth/missing-password'){
             emailerror.innerHTML = '';
             passworderror.innerHTML = 'Incorrect password';
+            //make inputfield red
+            document.getElementById('passwordL').style.border = '2px solid red';
         }
         else{
             alert('Try Again Later');

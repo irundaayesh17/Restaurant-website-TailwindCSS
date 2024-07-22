@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-<body  class="">
+<body  class="bg-slate-100">
     <div id="loadingScreen" class="bg-customYellow w-full h-screen fixed z-100 bg-center bg-no-repeat" style="background-image: url('https://i.postimg.cc/T2Dhm38J/loading.gif');"></div>
     <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-100">
         <div class="flex justify-between items-center">
@@ -70,16 +70,19 @@
         </div>
     </header>
     <!-- header end -->
-    <main class="pt-32 z-50 h-screen">
-            <div class="flex items-center md:mt-10 mt-[-16px] md:mx-auto md:px-24 justify-center lg:py-28">
-                <div class="bg-white md:bg-stone-50 p-8  md:rounded-lg md:shadow-md md:max-w-md hidden" id="loginform">
-                    <h2 class="font-semibold text-xl">Sign in</h2>
-                    <input type="email" id="emailL" class="w-full border border-gray-300 p-2 mt-3" placeholder="Email">
-                    <span id="emailerror" class="text-red-600 text-sm"></span>
-                    <input type="password" id="passwordL" class="w-full border border-gray-300 p-2 mt-3" placeholder="Password">
-                    <span id="passerror" class="text-red-600 text-sm"></span><br>
-                    <input type="checkbox" id="showpass" class="mt-3"> Show Password
-                    <button id="loginbutton" class="w-full bg-blue-500 hover:bg-blue-600 hover:transition-transform duration-200 text-white p-2 mt-2 rounded-3xl">Log in</button>
+    <main class="pt-24 z-50 h-screen">
+            <div class="flex flex-col items-center sm:mt-10 mt-[-16px] sm:mx-auto sm:px-24 justify-center sm:py-28 py-36 px-0">
+                <div class="bg-slate-100 sm:bg-slate-100 p-8 sm:rounded-lg sm:shadow-lg md:max-w-md hidden" id="loginform">
+                    <h2 class="font-custom3 text-4.5xl font-bold ml-2 mb-6">Sign in!</h2>
+                    <hr class="w-12 h-2 ml-2 bg-customYellow rounded-lg mb-3">
+                    <input type="email" id="emailL" class="login-input sm:w-full w-full h-12 rounded-button border-1 border-gray-300 pl-6 font-medium sm:text-sm text-base p-2 mt-3" placeholder="Email">
+                    <span id="emailerror" class="text-red-600 text-sm ml-6"></span>
+                    <input type="password" id="passwordL" class="login-input sm:w-full w-full h-12 rounded-button border-1 border-gray-300 pl-6 font-medium sm:text-sm text-base p-2 mt-4" placeholder="Password">
+                    <span id="passerror" class="text-red-600 text-sm ml-6"></span>
+                    <div class="mt-3 ml-5 mb-3">
+                    <input type="checkbox" id="showpass"> <label for="showpass" class="sm:text-sm text-base">Show Password</label>
+                    </div>
+                    <button id="loginbutton" class="sm:w-full w-full h-12 bg-customYellow hover:bg-customyellowhover hover:transition-transform duration-300 text-black hover:text-white font-bold font-custom3 text-base p-2 mt-2 rounded-profile">Log in</button>
                 </div>
                 <div class=" justify-center items-center w-full md:w-auto h-68 py-24 md:py-0 md:h-auto  grid grid-rows-2 gap-2">
                     <h4 id="useremailL" class="text-2xl font-custom3 font-semibold text-black"></h4>

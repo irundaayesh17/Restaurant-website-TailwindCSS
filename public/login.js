@@ -56,3 +56,14 @@ function subMenu(e) {
     }
 }
 
+//focus event on input fields
+document.querySelectorAll('.login-input').forEach(function(input) {
+    input.addEventListener('focus', function() {
+        this.style.border = '2px solid'; // Apply focus style to all inputs with class .contact-input
+        this.style.borderColor = '##E9A80A'; // Apply focus style to all inputs with class .contact
+    });
+    input.addEventListener('blur', function() {
+        this.style.border = '1px solid'; // Remove border on blur for all inputs
+        this.style.borderColor = '#D1D5DB'; // Remove border color on blur for all inputs
+    });
+});

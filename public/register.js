@@ -12,6 +12,11 @@ function generatepass(){
     const pass = generatepassword(length, isinclude_lowercase, isinclude_uppercase, isinclude_numbers, isinclude_symbols);
     document.getElementById('password').value = pass;
     document.getElementById('cpassword').value = pass;
+    document.getElementById('password').style.border = '1px solid #D1D5DB';
+    document.getElementById('cpassword').style.border = '1px solid #D1D5DB';
+    //error remove
+    document.getElementById('passerror').innerHTML = '';
+    document.getElementById('cpasserror').innerHTML = '';
     console.log(`Pass is ${pass}`);
 }
 
@@ -69,10 +74,13 @@ function fnamevalidation() {
   // Check if first name contains numbers
   if (/[0-9]/.test(fname.value)) {
     fnameerror.innerHTML = 'First Name cannot contain numbers';
+    //make input field red
+    document.getElementById('fname').style.border = '2px solid red';
     return false;
   }
 
   fnameerror.innerHTML = '';  // Clear error message if valid
+  document.getElementById('fname').style.border = '1px solid #D1D5DB';
   return true;
 }
 
@@ -83,10 +91,12 @@ function lnamevalidation() {
     // Check if first name contains numbers
     if (/[0-9]/.test(lname.value)) {
         lnameerror.innerHTML = 'First Name cannot contain numbers';
+        document.getElementById('lname').style.border = '2px solid red';
       return false;
     }
   
     lnameerror.innerHTML = '';  // Clear error message if valid
+    document.getElementById('lname').style.border = '1px solid #D1D5DB';
     return true;
 }
 
@@ -97,10 +107,12 @@ function emailvalidation() {
   const emailRegex = /^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
   if (!emailRegex.test(email.value)) {
     emailerror.innerHTML = 'Invalid Email';
+    document.getElementById('email').style.border = '2px solid red';
     return false;
   }
 
   emailerror.innerHTML = '';  // Clear error message if valid
+  document.getElementById('email').style.border = '1px solid #D1D5DB';
   return true;
 }
 
@@ -111,20 +123,25 @@ function passwordvalidation() {
     // Check if password is at least 8 characters long
     if (password.value.length < 8) {
       passworderror.innerHTML = 'Password must be at least 8 characters long';
+      document.getElementById('password').style.border = '2px solid red';
       return false;
     }
     //check password atleast one uppercase letter andonelowercase andonenumber
     else if (!/[A-Z]/.test(password.value) || !/[a-z]/.test(password.value) || !/[0-9]/.test(password.value)) {
         passworderror.innerHTML = 'Password must contain atleast one uppercase, one lowercase and one number';
+        document.getElementById('password').style.border = '2px solid red';
         return false;
     }
     else if (cpassword.value != password.value){
         cpassworderror.innerHTML = 'Password does not match';
+        document.getElementById('cpassword').style.border = '2px solid red';
         return false;
     }
   
     passworderror.innerHTML = '';  // Clear error message if valid
     cpassworderror.innerHTML = '';  // Clear error message if valid
+    document.getElementById('password').style.border = '1px solid #D1D5DB';
+    document.getElementById('cpassword').style.border = '1px solid #D1D5DB';
     return true;
   }
 

@@ -133,17 +133,23 @@
         const errorCode = error.code;
         if(errorCode === 'auth/email-already-in-use'){
           emailerror.innerHTML = 'Email already in use';
+          //make input field red
+          document.getElementById('email').style.border = '2px solid red';
         }
         else if(errorCode === 'auth/invalid-email'){
           emailerror.innerHTML = 'Invalid email';
+          document.getElementById('email').style.border = '2px solid red';
         }
         else if(errorCode === 'auth/weak-password'){
           passworderror.innerHTML = 'Weak password';
+          document.getElementById('password').style.border = '2px solid red';
           cpassworderror.innerHTML = '';
         }
         else if(errorCode === 'auth/missing-password'){
           passworderror.innerHTML = 'Password is required';
           cpassworderror.innerHTML = 'Password is required';
+          document.getElementById('password').style.border = '2px solid red';
+          document.getElementById('cpassword').style.border = '2px solid red';
         }
         else if(errorCode === 'auth/too-many-requests'){
           alert('Too many requests, try again later');

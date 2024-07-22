@@ -105,12 +105,14 @@ module.exports = {
       'loader': '0px 0px 55px 55px',
       'handle': '0px 25px 80px 0px',
       'profile': '50px',
+      'button': '10px',
     },
     borderSpacing: ({ theme }) => ({
       ...theme('spacing'),
     }),
     borderWidth: {
       DEFAULT: '1px',
+      1: '1px',
       0: '0px',
       2: '2px',
       3: '3px',
@@ -350,6 +352,7 @@ module.exports = {
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+      '4.5xl': ['2.5rem', { lineHeight: '1' }],
       '5xl': ['3rem', { lineHeight: '1' }],
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
@@ -1093,6 +1096,7 @@ module.exports = {
       'handle': '35px',
       'cup': '130px',
       '500': '500px',
+      '420': '420px',
     }),
     willChange: {
       auto: 'auto',
