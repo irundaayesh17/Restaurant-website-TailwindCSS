@@ -44,3 +44,4 @@ function subMenu(e) {
         submenu.style.pointerEvents = 'none'; // Disable pointer events when submenu is invisible
     }
 }
+
