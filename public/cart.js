@@ -4,9 +4,15 @@ let cartBtn = document.getElementById('cartBTN');
 //let listcart = document.getElementById('listcart');
 //let total = document.getElementById('total');
 
-cartBtn.addEventListener('click', function(){
+cartBtn.addEventListener('click', function() {
     cartPanel.classList.remove('left-full');
-    cartPanel.classList.add('left-custom-left');
+    
+    if (window.innerWidth >= 640) { // md and larger
+        cartPanel.classList.add('left-custom-left');
+    } else { // smaller than md
+        cartPanel.classList.add('left-custom-left-sm');
+    }
+    
     cartPanel.style.zIndex = '1000';
     cartPanel.style.pointerEvents = 'all';
 });
@@ -137,24 +143,24 @@ function addCartToHtml(){
     if(cart){
         cart.forEach(product => {
             let newcart = document.createElement('div');
-            newcart.classList.add('cart-item', 'grid', 'grid-cols-cart', 'gap-10', 'text-center', 'pl-8', 'items-center', 'overflow-hidden', 'mt-0', 'bg-white', 'py-3');
+            newcart.classList.add('cart-item', 'grid', 'sm:grid-cols-cart', 'grid-cols-1', 'sm:gap-10', 'gap-4','text-center', 'sm:pl-8', 'pl-2','items-center', 'overflow-hidden', 'mt-0', 'bg-white', 'py-3');
             newcart.innerHTML = 
             `
-                <div class="img">
-                    <img src="${product.image}" alt="food1" class="w-40 h-20 object-cover rounded-lg">
+                <div class="img sm:col-span-1 col-span-2 flex justify-center sm:justify-start items-center">
+                    <img src="${product.image}" alt="food1" class="sm:w-40 sm:h-20 w-20 h-14 object-cover rounded-lg">
                 </div>
-                <div class="info grid grid-rows-2">
+                <div class="info grid grid-rows-2 sm:col-span-1 col-span-2">
                     <div class="name text-center mt-1">
                         <h1 class="font-custom3 font-semibold text-sm">${product.name}</h1>
                     </div>
-                    <div class="quantity">
+                    <div class="quantity flex justify-center items-center mt-0 sm:mt-0">
                         <button onclick="changequantity(${product.id}, '-')" class="minus bg-gray-100 w-8 h-8 rounded-lg">-</button>
                         <input type="text" class="quantity-input w-8 h-8 text-center" value="${product.quantity}">
                         <button onclick="changequantity(${product.id}, '+')" class="plus bg-gray-100 w-8 h-8 rounded-lg">+</button>
                     </div>
                 </div>
-                <div class="totalprice justify-start ml-8">
-                    <h1 class="font-custom3 font-medium text-base text-justify">${product.price}</h1>
+                <div class="totalprice sm:col-span-1 col-span-2 justify-center sm:justify-start mt-0 sm:mt-0">
+                    <h1 class="font-custom3 font-medium text-base sm:text-left">${product.price}</h1>
                 </div>
             `;
             listcartHtml.appendChild(newcart);

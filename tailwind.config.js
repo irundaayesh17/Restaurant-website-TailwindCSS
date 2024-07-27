@@ -527,6 +527,7 @@ module.exports = {
       12: 'repeat(12, minmax(0, 1fr))',
       'auto-fit': 'repeat(auto-fit, minmax(27rem, 1fr))',
       'cart': '100px 150px 150px 1fr',
+      'cartsm': '100px 150px 1fr',
     },
     gridTemplateRows: {
       none: 'none',
@@ -592,6 +593,7 @@ module.exports = {
       '3/4': '75%',
       full: '100%',
       'custom-left': 'calc(100% - 500px)',
+      'custom-left-sm': 'calc(100% - 370px)',
     }),
     invert: {
       0: '0',

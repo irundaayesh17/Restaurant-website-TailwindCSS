@@ -21,28 +21,41 @@
         </div>
 
         <nav class="navbar" id="navbarr">
-            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent transition-opacity duration-300">
-                <li class="mx-4 my-6 md:my-0 ">
-                <a href="index.html" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="home">Home</a>
+            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py-0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent transition-opacity duration-300">
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="index.html" class="active text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="home">Home
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="menu.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="menu">Menu</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="menu.html" class="text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="menu">Menu
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="about.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="about">About</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="about.html" class="text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="about">About
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="contact.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="contact">Contact</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="contact.html" class="text-base px-4 py-2 rounded-lg hover:text-gray-950 relative" id="contact">Contact
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="order.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="order">Order</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="order.html" class="text-base px-4 py-2 rounded-lg text-gray-950 relative" id="order">Order
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
             </ul>
         </nav>
         
         <div class="headerbuttons flex items-center gap-x-1">
-            <a href="register.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="registerL">Sign Up</a>
-            <a href="login.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="loginL">Log in</a>
+            <a  class="inline-block py-3 px-3 uppercase text-xl font-bold cursor-pointer tracking-wider" id="cartBTN">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="register.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider headerbutton relative border-2" id="registerL">Sign Up</a>
+            <a href="login.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 bg-gray-800 mr-2 text-white" id="loginL">Log in</a>
             <div class="dropdown-profile relative inline-block">
                 <div class="flex items-center pr-4 justify-start cursor-pointer border-3 border-gray-950 rounded-profile hover:bg-gray-100 duration-300 w-40" name="dropdown-menu" id="sub-menu-button" onclick="subMenu(this)">
                     <i class="fas fa-user-circle text-4xl pl-2 pt-1 w-12 h-12"></i>
@@ -70,6 +83,27 @@
         </div>
     </header>
     <!-- header end -->
+    <!-- Side Panel Start -->
+    <div id="sidePanel" class="fixed top-0 sm:w-[500px] w-[340px] h-screen bg-white duration-500 z-100 flex flex-col left-full shadow-lg ml-10">
+        <!-- Fixed Header -->
+        <div class="flex-none">
+            <h1 class="font-custom3 font-medium text-base mt-6 ml-8">CART</h1>
+            <hr class="w-full h-[0.5px] bg-black rounded-lg mt-6 mb-0">
+        </div>
+        <!-- Scrollable Content -->
+        <div class="flex-grow overflow-auto">
+            <ul id="listcart" class="listcart gap-2 grid grid-row-5">
+                
+                
+            </ul>
+        </div>
+        <!-- Fixed Footer (Checkout Button) -->
+        <hr class="w-full h-[0.5px] bg-black rounded-lg mt-0">
+        <div class="flex-none flex justify-center mb-9 items-center relative mt-7">
+            <button id="total" class="flex items-center checkout w-full h-12 mx-10 justify-center bg-black rounded-profile text-white font-semibold">0</button>
+        </div>
+    </div>
+    <!-- Side Panel End -->
     <main class="pt-24 z-50 h-screen">
             <div class="flex flex-col items-center sm:mt-10 mt-[-16px] sm:mx-auto sm:px-24 justify-center sm:py-28 py-36 px-0">
                 <div class="bg-slate-100 sm:bg-slate-100 p-8 sm:rounded-lg sm:shadow-lg md:max-w-md hidden" id="loginform">
@@ -135,6 +169,7 @@
 
     <!-- footer end -->
     <script type="module" src="firebase-login.js"></script>
+    <script src="cart.js"></script>
     <script src="login.js"></script>
 </body>
 </html>
