@@ -14,3 +14,6 @@
 .headerbutton{
     @apply bg-transparent transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-y-0 before:bg-gray-800 before:transition-transform before:duration-300 before:content-[''] hover:text-white hover:before:scale-y-100 overflow-hidden;
 }
+.btnanimation{
+    @apply bg-transparent border-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-y-0 before:bg-gray-800 before:transition-transform before:duration-300 before:content-[''] hover:text-white hover:before:scale-y-100 overflow-hidden;
+}

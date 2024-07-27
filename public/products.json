@@ -1,0 +1,117 @@
+[
+    {
+      "id": 1,
+      "name": "Zinger Burger",
+      "price": 15.99,
+      "image": "img/m4.png"
+    },
+    {
+      "id": 2,
+      "name": "Double Chicken Burger",
+      "price": 21.99,
+      "image": "img/m2.png"
+    },
+    {
+      "id": 3,
+      "name": "Sizzling Beef Burger",
+      "price": 19.59,
+      "image": "img/m5.png"
+    },
+    {
+      "id": 4,
+      "name": "Fried Chicken Burger",
+      "price": 8.99,
+      "image": "img/mcard1.png"
+    },
+    {
+      "id": 5,
+      "name": "Whopper Chicken Burger",
+      "price": 8.99,
+      "image": "img/mcard2.png"
+    },
+    {
+      "id": 6,
+      "name": "Shish Barbecue Kebab",
+      "price": 23.99,
+      "image": "img/mcard3.png"
+    },
+    {
+      "id": 7,
+      "name": "Grilled Chicken Burger",
+      "price": 11.99,
+      "image": "img/mcard4.png"
+    },
+    {
+      "id": 8,
+      "name": "Veggie Chicken Submarine",
+      "price": 24.99,
+      "image": "img/mcard5.png"
+    },
+    {
+      "id": 9,
+      "name": "Chocolate Sushi-Krape",
+      "price": 9.99,
+      "image": "img/suchi.png"
+    },
+    {
+      "id": 10,
+      "name": "Blue Berry Cheese Cake",
+      "price": 8.00,
+      "image": "img/bbcake.png"
+    },
+    {
+      "id": 11,
+      "name": "Strawberry Crepe",
+      "price": 12.99,
+      "image": "img/crepe.png"
+    },
+    {
+      "id": 12,
+      "name": "Caramel Puff Pastry",
+      "price": 2.99,
+      "image": "img/puff.png"
+    },
+    {
+      "id": 13,
+      "name": "Coca Cola Mini",
+      "price": 2.00,
+      "image": "img/coke2.png"
+    },
+    {
+      "id": 14,
+      "name": "Sprite Mini",
+      "price": 2.00,
+      "image": "img/sprite2.png"
+    },
+    {
+      "id": 15,
+      "name": "Lemon Juice",
+      "price": 4.00,
+      "image": "img/juice.png"
+    },
+    {
+      "id": 16,
+      "name": "Chocolate Oreo Mocha",
+      "price": 5.99,
+      "image": "img/mocha2.png"
+    },
+    {
+      "id": 17,
+      "name": "Iced Coffee",
+      "price": 3.99,
+      "image": "img/icoffee2.png"
+    },
+    {
+      "id": 18,
+      "name": "Chicken Soup",
+      "price": 4.99,
+      "image": "img/csoup2.png"
+    },
+    {
+      "id": 19,
+      "name": "Indian Spicy Soup",
+      "price": 5.99,
+      "image": "img/spicysoup.png"
+    }
+  ]
+  

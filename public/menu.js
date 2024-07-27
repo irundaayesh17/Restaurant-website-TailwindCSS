@@ -1,3 +1,5 @@
+
+//navbar
 let navbarr = document.querySelector('ul');
 function menu(e){
     if(e.name === 'menu'){

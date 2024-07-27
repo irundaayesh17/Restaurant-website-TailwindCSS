@@ -25,28 +25,41 @@
         </div>
 
         <nav class="navbar " id="navbarr">
-            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent">
-                <li class="mx-4 my-6 md:my-0">
-                <a href="index.html" class="active text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="home">Home</a>
+            <ul class="font-custom3 font-medium md:flex md:items-center md:static absolute z-[-1] md:z-auto w-full left-0 md:py-0 py-4 text-center md:opacity-100 opacity-0 bg-slate-50 md:bg-transparent transition-opacity duration-300">
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="index.html" class="active text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="home">Home
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="menu.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="menu">Menu</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="menu.html" class="text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="menu">Menu
+                        <span class="block h-1 bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-100  origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="about.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="about">About</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="about.html" class="text-base  px-4 py-2 rounded-lg hover:text-gray-950 relative" id="about">About
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="contact.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="contact">Contact</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="contact.html" class="text-base px-4 py-2 rounded-lg hover:text-gray-950 relative" id="contact">Contact
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                <a href="order.html" class="text-base hover:bg-gray-800 px-4 py-2 rounded-lg hover:text-white" id="order">Order</a>
+                <li class="mx-4 my-6 md:my-0 group">
+                    <a href="order.html" class="text-base px-4 py-2 rounded-lg text-gray-950 relative" id="order">Order
+                        <span class="block h-1 bg-transparent group-hover:bg-current absolute bottom-0 left-0 w-full transition-all duration-[300ms] transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+                    </a>
                 </li>
             </ul>
         </nav>
         
         <div class="headerbuttons flex items-center gap-x-1">
-            <a href="register.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="registerBTN">Sign Up</a>
-            <a href="login.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 hover:bg-gray-800 mr-2 hover:text-white" id="loginBTN">Log in</a>
+            <a  class="inline-block py-3 px-3 uppercase text-xl font-bold cursor-pointer tracking-wider" id="cartBTN">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="register.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider headerbutton relative border-2" id="registerBTN">Sign Up</a>
+            <a href="login.html" class="inline-block  rounded-full py-3 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider headerbutton relative border-2" id="loginBTN">Log in</a>
             <div class="dropdown-profile relative inline-block">
                 <div class="flex items-center pr-4 justify-start cursor-pointer border-3 border-gray-950 rounded-profile hover:bg-gray-100 duration-300 w-40" name="dropdown-menu" id="sub-menu-button" onclick="subMenu(this)">
                     <i class="fas fa-user-circle text-4xl pl-2 pt-1 w-12 h-12"></i>
@@ -74,401 +87,33 @@
         </div>
     </header>
     <!-- header end -->
+    <!-- Side Panel Start -->
+<div id="sidePanel" class="fixed top-0 w-[500px] h-screen bg-white duration-500 z-100 flex flex-col left-full shadow-lg">
+    <!-- Fixed Header -->
+    <div class="flex-none">
+        <h1 class="font-custom3 font-medium text-base mt-6 ml-8">CART</h1>
+        <hr class="w-full h-[0.5px] bg-black rounded-lg mt-6 mb-0">
+    </div>
+    <!-- Scrollable Content -->
+    <div class="flex-grow overflow-auto">
+        <ul id="listcart" class="listcart gap-2 grid grid-row-5">
+            
+            
+        </ul>
+    </div>
+    <!-- Fixed Footer (Checkout Button) -->
+    <hr class="w-full h-[0.5px] bg-black rounded-lg mt-0">
+    <div class="flex-none flex justify-center mb-9 items-center relative mt-7">
+        <button id="total" class="flex items-center checkout w-full h-12 mx-10 justify-center bg-black rounded-profile text-white font-semibold">0</button>
+    </div>
+</div>
+<!-- Side Panel End -->
     <!--menu-->
     <section id="menu" class="menu  py-20">
         <div class="container mx-auto px-2 md:mt-12 mt-16">
-            <h3 class="text-4xl font-bold font-custom2 mt-4 text-center text-black mb-8">Burgers</h3>
-            <div class="box-container grid grid-cols-2 gap-y-8 gap-x-4 xl:grid xl:grid-cols-4 xl:px-12 xl:mt-4 md:grid md:grid-cols-3 md:mt-5 sm:mt-5 mt-5 lg:grid lg:grid-cols-3 lg:mt-5 sm:grid sm:grid-cols-2">
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/m4.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Zinger Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$15.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300  bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center">
-                        <img src="img/m2.png" alt="" class="max-w-full max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mr-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Dounle Chicken Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$21.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300  bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-1 items-center justify-center">
-                        <img src="img/m5.png" alt="" class="max-w-full max-h-full xl:pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Sizzling Beef Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$19.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-1 items-center justify-center xl:mt-6">
-                        <img src="img/mcard1.png" alt="" class="xl:max-w-full xl:max-h-full" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Fried Chicken Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$9.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-1 items-center justify-cente xl:mt-9">
-                        <img src="img/mcard2.png" alt="" class="max-w-full max-h-full" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Whopper Chicken Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$8.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-1 items-center justify-center xl:mt-8">
-                        <img src="img/mcard3.png" alt="" class="max-w-full max-h-full" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Shish Barbecue Kebab</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$23.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-x shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img xl:mt-8 flex-1 items-center justify-center">
-                        <img src="img/mcard4.png" alt="" class="max-w-full max-h-full" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Grilled Chicken Burger</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$12.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img xl:mt-9 flex-1 items-center justify-center">
-                        <img src="img/mcard5.png" alt="" class="max-w-full max-h-full" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Veggie Chicken Submarine</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$24.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <h3 class="text-4xl font-bold font-custom2 mt-10 text-center text-black mb-8">Desserts</h3>
-            <div class="box-container grid grid-cols-2 gap-y-8 gap-x-4 xl:grid xl:grid-cols-4 xl:px-12 xl:mt-4 md:grid md:grid-cols-3 md:mt-5 sm:mt-5 mt-5 lg:grid lg:grid-cols-3 lg:mt-5 sm:grid sm:grid-cols-2">
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/suchi.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Chocolate Sushi-Krape</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$9.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/bbcake.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Blue Berry Cheese Cake</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$8.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/crepe.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Strawberry Crepe</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$12.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/puff.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Caramel Puff Pastry</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$2.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-4xl font-bold font-custom2 mt-10 text-center text-black mb-8">Beverages</h3>
-            <div class="box-container grid grid-cols-2 gap-y-8 gap-x-4 xl:grid xl:grid-cols-4 xl:px-12 xl:mt-4 md:grid md:grid-cols-3 md:mt-5 sm:mt-5 mt-5 lg:grid lg:grid-cols-3 lg:mt-5 sm:grid sm:grid-cols-2">
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/coke2.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">CocaCola Mini</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$2.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/sprite2.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Sprite Mini</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$2.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/juice.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Lemon Juice</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$4.00</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/mocha2.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Chocolate Oreo Mocha</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$5.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/icoffee2.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Iced Coffee</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$3.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <h3 class="text-4xl font-bold font-custom2 mt-10 text-center text-black mb-8">Soup</h3>
-            <div class="box-container grid grid-cols-2 gap-y-8 gap-x-4 xl:grid xl:grid-cols-4 xl:px-12 xl:mt-4 md:grid md:grid-cols-3 md:mt-5 sm:mt-5 mt-5 lg:grid lg:grid-cols-3 lg:mt-5 sm:grid sm:grid-cols-2">
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/csoup2.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Chicken Soup</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$4.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu_card md:py-2 lg:py-8 py-8 px-4 hover:shadow-xl shadow-md transition duration-300 bg-slate-50 rounded-2xl flex flex-col">
-                    <a href="#" class="fas fa-heart fa-lg hover:text-red-700 duration-200"></a>
-                    <div class="menu_img flex-auto items-center justify-center ">
-                        <img src="img/spicysoup.png" alt="" class="xl:max-w-full xl:max-h-full pt-5" style="filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3));">
-                    </div>
-                    <div class="menu_content mt-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Indian Spicy Soup</h3>
-                    </div>
-                    <div class="pb-4 text-center">
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star text-yellow-400 "></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                    <div class="order_now flex items-center justify-center md:grid md:grid-rows-2 md:gap-3 lg:flex lg:gap-0 gap-0 ">
-                        <h4 class="lg:text-3xl md:text-3xl text-2xl sm:text-3xl font-custom3 font-bold mr-4 lg:mr-4 md:mr-1">$5.99</h4>
-                        <a href="order.html" class="rounded-md py-2 xl:px-4 lg:px-8 md:px-4 px-2 text-center bg-red-700 text-white">Order Now</a>
-                    </div>
-                </div>
+            <h3 class="text-4xl font-bold font-custom2 mt-4 text-center text-black mb-8">Latest</h3>
+            <div id="menuContainer" class="box-container grid grid-cols-2 gap-y-8 gap-x-4 xl:grid xl:grid-cols-4 xl:px-12 xl:mt-4 md:grid md:grid-cols-3 md:mt-5 sm:mt-5 mt-5 lg:grid lg:grid-cols-3 lg:mt-5 sm:grid sm:grid-cols-2">
+                
             </div>
         </div>
     </section>
@@ -517,7 +162,8 @@
     </footer>
 
     <!-- footer end -->
-     <script type="module" src="auth-state.js"></script>
+    <script type="module" src="auth-state.js"></script>
+    <script src="cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="menu.js"></script>
 </body>

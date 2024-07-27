@@ -19,6 +19,8 @@ module.exports = {
       roll_down: 'roll_down 0.3s ease-out',
       slidein: 'slidein 0.5s ease-out forwards',
       slideout: 'slideout 0.5s ease-in forwards',
+      fillup: 'fillup 0.5s ease-in-out',
+      'bg-bottom-to-top': 'bg-bottom-to-top 0.5s ease-in-out forwards',
     },
     aria: {
       busy: 'busy="true"',
@@ -524,6 +526,7 @@ module.exports = {
       11: 'repeat(11, minmax(0, 1fr))',
       12: 'repeat(12, minmax(0, 1fr))',
       'auto-fit': 'repeat(auto-fit, minmax(27rem, 1fr))',
+      'cart': '100px 150px 150px 1fr',
     },
     gridTemplateRows: {
       none: 'none',
@@ -588,6 +591,7 @@ module.exports = {
       '2/4': '50%',
       '3/4': '75%',
       full: '100%',
+      'custom-left': 'calc(100% - 500px)',
     }),
     invert: {
       0: '0',
@@ -640,6 +644,14 @@ module.exports = {
         '0%': { transform: 'translateX(0)' },
         '100%': { transform: 'translateX(-100%)' },
       },
+      fillup: {
+        '0%': { top: '100%' },
+        '100%': { top: '0' },
+      },
+      'bg-bottom-to-top': {
+          '0%': { backgroundPosition: '0 100%' },
+          '100%': { backgroundPosition: '0 0' },
+        },
     },
     letterSpacing: {
       tighter: '-0.05em',
