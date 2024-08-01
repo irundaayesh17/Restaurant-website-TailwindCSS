@@ -1,6 +1,8 @@
 //cart panel
 let cartPanel = document.getElementById('sidePanel');
 let cartBtn = document.getElementById('cartBTN');
+let body = document.querySelector('body');
+let overlay = document.getElementById('overlay');
 //let listcart = document.getElementById('listcart');
 //let total = document.getElementById('total');
 
@@ -15,6 +17,12 @@ cartBtn.addEventListener('click', function() {
     
     cartPanel.style.zIndex = '1000';
     cartPanel.style.pointerEvents = 'all';
+    //make body darker
+    overlay.classList.remove('hidden');
+    setTimeout(() => {
+        overlay.style.transition = 'backdrop-filter 300ms';
+        overlay.style.backdropFilter = 'blur(5px)';
+    }, 0);
 });
 
 
@@ -33,6 +41,8 @@ document.addEventListener('click', function(event) {
         cartPanel.classList.add('left-full');
         cartPanel.style.zIndex = '-1';
         cartPanel.style.pointerEvents = 'none';
+
+        overlay.classList.add('hidden');
     }
 });
 

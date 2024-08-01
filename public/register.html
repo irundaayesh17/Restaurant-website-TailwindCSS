@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-<body  class="flex flex-col min-h-screen bg-slate-100">
+<body id="body" class="flex flex-col min-h-screen bg-slate-100">
     <div id="loadingScreen" class="bg-customYellow w-full h-screen fixed z-100 bg-center bg-no-repeat" style="background-image: url('https://i.postimg.cc/T2Dhm38J/loading.gif');"></div>
     <header class=" p-4 shadow md:flex md:items-center md:justify-between w-full fixed z-50 duration-100">
         <div class="flex justify-between items-center">
@@ -82,8 +82,9 @@
         </div>
     </header>
     <!-- header end -->
+    <div id="overlay" class="fixed inset-0 bg-gray-950 bg-opacity-50 z-50 hidden"></div>
     <!-- Side Panel Start -->
-    <div id="sidePanel" class="fixed top-0 sm:w-[500px] w-[340px] h-screen bg-white duration-500 z-100 flex flex-col left-full shadow-lg ml-10">
+    <div id="sidePanel" class="fixed top-0 sm:w-[500px] w-[340px] h-screen bg-white duration-500 z-100 flex flex-col left-full shadow-lg ml-10 md:ml-0">
         <!-- Fixed Header -->
         <div class="flex-none">
             <h1 class="font-custom3 font-medium text-base mt-6 ml-8">CART</h1>

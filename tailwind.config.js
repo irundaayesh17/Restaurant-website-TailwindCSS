@@ -528,6 +528,9 @@ module.exports = {
       'auto-fit': 'repeat(auto-fit, minmax(27rem, 1fr))',
       'cart': '100px 150px 150px 1fr',
       'cartsm': '100px 150px 1fr',
+      'order': '500px 1fr',
+      'order2': '20px 500px 1fr',
+      'ordersm': '150px 1fr',
     },
     gridTemplateRows: {
       none: 'none',
@@ -1131,5 +1134,11 @@ module.exports = {
     },
     
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/backdrop-filter'),
+  ],
 };
