@@ -242,6 +242,14 @@
         </div>
     </section>
     <!--explore menu end-->
+    <div id="overlay3" class="fixed inset-0 bg-opacity-50 z-99 hideeb"></div>
+    <!--Popup message-->
+    <div id="warningpopup-panel" class="popup_panel z-100  w-[500px] h-[300px] bg-white border-2 fixed top-[30%] left-[40%] text-center pt-7 px-[30px] pb-[30px] flex-col justify-center items-center rounded-xl hidden">
+        <img src="img/warning.png" alt="tick" class="w-28 h-28 mx-auto mt-[-80px] block">
+        <h2 class="text-xl font-bold mt-3 mb-2">Warning</h2>
+        <p class="text-base mb-5 font-medium">Please note that our website is currently under development. You may encounter incomplete sections and limited functionality as we work to bring you the best experience.</p>
+        <button id="close_popupwarning" onclick="closepopup()" class="close-popup shadow-md px-6 py-2 rounded-profile bg-red-600 hover:bg-red-900 duration-300  text-white text-base font-semibold">Close</button>
+    </div>
     <!-- footer -->
     <footer class="footer px-4 0 mt-16" style="background-image: url('https://i.ibb.co/VWsBT2J/headerbg.png');">
         <div class="container mx-auto py-14 px-6">

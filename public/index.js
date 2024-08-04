@@ -102,6 +102,33 @@ if (target) {
   observer.observe(target); // Start observing
 }
 
-//bannermenu cards navigations
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay3 = document.getElementById('overlay3');
+  const close_popupwarning = document.getElementById('close_popupwarning');
+  const popupwarning = document.getElementById('warningpopup-panel');
 
+  // Function to show the popup if it's the user's first visit
+  function showPopupIfFirstVisit() {
+      const hasVisited = localStorage.getItem('hasVisited');
+      console.log('Has visited:', hasVisited); // Debugging line
+      if (!hasVisited) { // Show popup if hasVisited is null or false
+          overlay3.classList.remove('hidden');
+          overlay3.style.zIndex = '99';
+          overlay3.style.backdropFilter = 'blur(4px)';
+          overlay3.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+          popupwarning.classList.remove('hidden');
+          localStorage.setItem('hasVisited', 'true');
+          console.log('Setting hasVisited to true'); // Debugging line
+      }
+  }
 
+  // Function to hide the popup
+  close_popupwarning.addEventListener('click', function() {
+      overlay3.classList.add('hidden');
+      popupwarning.classList.add('hidden');
+      console.log('Popup closed'); // Debugging line
+  });
+
+  // Call the function to check and show the popup if it's the first visit
+  showPopupIfFirstVisit();
+});
