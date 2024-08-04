@@ -177,6 +177,8 @@ module.exports = {
       rose: colors.rose,
       customYellow: 'rgba(255, 198, 76, 1)',
       customyellowhover: 'rgba(233, 161, 10, 1)',
+      paymentcolor: 'rgba(254,240,138,255)',
+      paymentcolorhover: 'rgba(253,224,71,255)',
     }),
     columns: {
       auto: 'auto',
@@ -1134,11 +1136,5 @@ module.exports = {
     },
     
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/backdrop-filter'),
-  ],
+  plugins: [],
 };
